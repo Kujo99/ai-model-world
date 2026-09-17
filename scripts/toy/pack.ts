@@ -72,11 +72,21 @@ function main(): void {
     if (!text.includes(BASE)) continue;
 
     text = text.split(BASE).join(prefix);
-    // 只补站内链接：以 ./ 或 ../ 开头、且以 / 收尾的那些。
-    // 资源引用都带扩展名，不会被这条命中。
-    text = text.replace(/((?:\.\.?\/)[^"')\s]*?\/)(?=["')])/g, '$1index.html');
-    // 根链接 href="./" 被上面那条漏掉（没有中间路径段），单独补一次
-    text = text.replace(/((?:src|href)=")(\.\/)(")/g, '$1$2index.html$3');
+    /*
+     * 给目录形式的站内链接补 index.html。
+     *
+     * 三种形态都要覆盖，少一种就漏一批链接：
+     *   href="./model/foo/"            普通跳转
+     *   href="../"                     子页返回首页，没有中间路径段
+     *   href="./leaderboard/all/?k=v"  带查询串，斜杠后面不是引号
+     * 所以收尾用 ["?#] 三选一，中间的路径段整体可选。
+     *
+     * 资源引用不会被误伤：它们都以扩展名收尾，匹配不到「斜杠 + 结束符」。
+     */
+    text = text.replace(
+      /((?:src|href)=")((?:\.{1,2}\/)(?:[^"?#]*\/)?)(?=["?#])/g,
+      '$1$2index.html',
+    );
 
     writeFileSync(f, text);
     rewritten += 1;
