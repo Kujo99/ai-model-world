@@ -125,6 +125,12 @@ npx tsx scripts/sync/selftest.ts   # 数据管线的 217 项纯函数自检，�
 | 发了模型实测视频之后 | 补抓 B 站视频 | `npm run bilibili` | 每个模型 2.5 秒，只抓缺的和 14 天以上的 |
 | 改过代码 | 三道闸门 | `npx tsc --noEmit` / `npx eslint src scripts` / `npx tsx scripts/sync/selftest.ts` | 约 10 秒 |
 | 发布 | 生产构建 | `NEXT_DIST_DIR=.next-build npm run build` | 约 25 秒 |
+| 发 B 站 Toy | 打包 + **必跑**自检 | `npm run toy:build && npm run toy:verify` | 约 100 秒 |
+
+**发 Toy 之前一定要跑 `toy:verify`。** 它把包挂到与正式地址相同的子路径下，用真实浏览器
+把每个控件点一遍。`toy create` 给的预览链接不能当自检用：包里的 basePath 是构建时写死的，
+预览地址前缀不同，打开只会是没有样式的裸 HTML，这是预期行为。原因与那次
+「整站没水合却一条报错都没有」的事故见第六节第 15 条。
 
 **只有 `data/` 下的四个文件需要保存**：`models.json`（模型快照）、`bilibili.json`（视频）、
 `attribution.json`、`sync-report.json`。`public/sprites/` 与 `public/search-index.json`
@@ -173,6 +179,9 @@ dev 服务器不用重启（开发态每次请求重读磁盘）。跑完**必�
 | `flagship-gain.ts` | 接入新数据源能给首屏补多少编程成绩 |
 | `shots.ts [baseUrl] [outDir]` | 三个断点批量截图，视觉自验证用 |
 | `shot-detail.ts <slug>` | 单个角色详情页整页截图 |
+
+`scripts/toy/verify.ts` 不在这张表里，因为它会写盘（起本地服务）且是发版闸门而非诊断工具，
+但性质相同：**它回答的是「页面到底能不能用」，而这件事光看渲染结果看不出来。**
 | `verify-text.ts "某段文字"` | **区分「代码没改干净」和「浏览器缓存」**——两者表象一样 |
 | `measure-tiers.ts` | 体型档位在精灵图上的实际可辨性 |
 
@@ -490,6 +499,26 @@ OpenRouter 的 ToS 措辞极宽，公开展示 LLM 元数据的站点有被解�
     修法是 `toSlug` 把点转成连字符（转换后逐个核对，零碰撞），并加了两条自检锁住。
     教训：**「本地点得通」不等于「哪都点得通」**，静态站的路由行为一半由托管方决定；
     验证要用最笨的文件服务器，而且要对着**导出的文件名**核链接，别只看浏览器点得开。
+
+15. **把 basePath 换成相对路径，会让整站水合静默失败（2026-09-17 事故）。**
+    Toy 的正式地址是 `/toy/<slug>/`、预览是 `/toy/preview/preview_xxxx/`，前缀不同。
+    当时为了让预览也能跑，`pack.ts` 把产物里的 `/toy/ai-model-world/` 按每个文件自身的深度
+    换成了 `../`。结果**页面看着完全正常，所有按钮点了都没反应，控制台一条报错都没有**：
+    不是排行榜坏了，是首页、时间线、厂商页、详情页全都没水合，整站退化成一张截图。
+    线上跑了半天，Toy 随后被下架。
+    逐项试出来的边界：**JS 不能动**（chunk 在 `_next/static/chunks/`，相对路径是相对*文档*
+    解析的，换算出的 `../../../` 直接飞出站点根）；**HTML 里的 `<script src>` 也不能动**
+    （哪怕解析后完全正确也不行——turbopack 按 src 的字面值登记 chunk，而内联 flight 数据里的
+    模块引用 `I[39756,["/toy/.../chunks/xxx.js"],"default"]` 是绝对路径，两边对不上，
+    模块永远解析不出来）；**`<base href>` 和运行时设 `TURBOPACK_CHUNK_BASE_PATH` 同样救不了**。
+    结论是这个包只能挂在构建时写死的那个路径下，预览链接打开是裸 HTML，属预期。
+    顺带挖出第二个坑：`.txt` 预取负载删掉之后客户端路由会退化成整页跳转，
+    而跳转目标是 `/model/x/` 这种目录 URL，在只认完整文件路径的对象存储上就是 404。
+    修法是打包时注入一段捕获阶段的点击兜底，自己把 URL 补成 `index.html` 再跳，绕开路由；
+    全局搜索原先用 `router.push`，拦不到，一并改成了真链接。
+    教训：**「页面渲染正常」跟「页面能用」是两回事**，而且水合失败不报错。
+    自检必须是端到端的「点一下看状态变没变」，这就是 `npm run toy:verify` 存在的理由，
+    它会把每个赛道按钮、每个筛选控件、每条站内跳转、搜索都真点一遍。发版前必跑。
 
 ### 视觉侧
 
