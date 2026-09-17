@@ -809,16 +809,32 @@ export async function fetchEpoch(fetchedAt: string): Promise<EpochResult> {
 
       const strictKeys = new Set<string>();
       const looseKeys = new Set<string>();
-      const register = (raw: string) => {
+      const register = (raw: string, strictToo: boolean) => {
         if (!raw) return;
         const base = stripEffortSuffix(raw).split('/').pop() ?? raw;
         const variants = slugVariants(base);
-        if (variants[0]) strictKeys.add(`${vendorId}|${variants[0]}`);
+        if (strictToo && variants[0]) strictKeys.add(`${vendorId}|${variants[0]}`);
         for (const v of variants) looseKeys.add(`${vendorId}|${v}`);
       };
-      register(version);
-      register(name);
-      if (name) register(stripParenthetical(name));
+      register(version, true);
+      register(name, true);
+      /*
+       * 去掉括号后的名字**只能进宽松键**。
+       *
+       * 上游用括号区分同名的升级版：`DeepSeek-R1 (May 2025)` 是 R1-0528，
+       * 而 `DeepSeek-R1` 是初版，两行各有各的分（141.29 / 138.97）。
+       * 一旦让去括号的形式也占住严格键，它就会跟真正那行「纯名」撞车，
+       * 后写的覆盖先写的——实测 DeepSeek-R1 拿到了 R1-0528 的分、
+       * DeepSeek-V3 拿到了 V3-0324 的分，两个老型号的排名凭空虚高。
+       *
+       * 全量扫描上游 43 条带括号的行，只有 3 条存在同名纯名行（另一条是
+       * Claude 3.5 Sonnet），其余 40 条没有纯名版本，仍然要靠这次剥离才能匹配上——
+       * 所以不能删掉它，只能降级到宽松层。查找是「从严到宽逐档、只补缺失不覆盖」，
+       * 降级后它依然能兜住那 40 条，却不会再抢真身的位置。
+       *
+       * 编程成绩那条路径（registerLeagueScore）本来就是这么写的，这里是对齐它。
+       */
+      if (name) register(stripParenthetical(name), false);
 
       for (const k of strictKeys) {
         mergeInto(strict, k, score === null ? null : spec.key, score, releaseDate, org || null, iso);
