@@ -16,7 +16,9 @@
     "search-index": "tsx scripts/search-index/index.ts",
     "font": "tsx scripts/fonts/subset.ts",
     "qa:tiers": "tsx scripts/qa/measure-tiers.ts",
-    "bilibili": "tsx scripts/bilibili/refresh.ts"
+    "bilibili": "tsx scripts/bilibili/refresh.ts",
+    "toy:build": "NEXT_BASE_PATH=/toy/ai-model-world NEXT_DIST_DIR=.next-toy next build && tsx scripts/toy/pack.ts",
+    "_comment_toy": "B 站 Toy 包：构建时先统一前缀，pack.ts 再把它换成相对路径并给目录链接补 index.html。原因见 scripts/toy/pack.ts 顶部。产物在 .toy-pkg，用 toy create/update 上传。"
   },
   "dependencies": {
     "csv-parse": "^7.0.2",

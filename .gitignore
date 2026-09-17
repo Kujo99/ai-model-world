@@ -18,6 +18,8 @@
 # NEXT_DIST_DIR=.next-build 之类的并行构建目录，见 next.config.ts
 /.next-*/
 /out/
+# B 站 Toy 的上传包，由 npm run toy:build 从 .next-toy 再生产
+/.toy-pkg/
 
 # 精灵图是可再生产物：由 assets/lpc（已提交）+ data/models.json（已提交）确定性合成，
 # 整轮约 14 秒。不提交是因为合成器一旦改动就会一次性产生 15 MB 新 blob，
