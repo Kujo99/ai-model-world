@@ -555,7 +555,7 @@
     {
       "id": "livebench_agentic_coding",
       "inEci": false,
-      "models": 101,
+      "models": 102,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -567,7 +567,7 @@
     {
       "id": "livebench_coding",
       "inEci": false,
-      "models": 121,
+      "models": 122,
       "randomBaseline": null,
       "releaseDate": null,
       "scoreCeiling": null,
@@ -1117,7 +1117,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-09-17T06:35:44.025Z",
+  "generatedAt": "2026-09-17T17:44:00.254Z",
   "models": [
     {
       "benchmarks": {
@@ -50028,8 +50028,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.34611,
-        "outputPerMTok": 0.46148
+        "inputPerMTok": 0.34443,
+        "outputPerMTok": 0.45924
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -74007,6 +74007,148 @@
     },
     {
       "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": true,
+        "reasoning": false,
+        "structuredOutput": null,
+        "toolCall": false
+      },
+      "coding": [],
+      "contextWindow": null,
+      "firstSeenAt": "2026-09-17T17:44:00.254Z",
+      "id": "openai/gpt-image-2.5-flare",
+      "knowledgeCutoff": null,
+      "license": null,
+      "maxOutput": null,
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2.5 Flare",
+      "openWeights": false,
+      "params": {
+        "activeB": null,
+        "confidence": "estimated",
+        "sizeTier": 4,
+        "sizeTierBasis": "price",
+        "totalB": null
+      },
+      "pricing": {
+        "cachedInputPerMTok": 1.25,
+        "inputPerMTok": 5,
+        "outputPerMTok": 30
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.sizeTier": "derived",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-09-08",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "openai-gpt-image-2-5-flare",
+      "trainingComputeFlop": null,
+      "vendorId": "openai"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": true,
+        "reasoning": false,
+        "structuredOutput": null,
+        "toolCall": false
+      },
+      "coding": [],
+      "contextWindow": null,
+      "firstSeenAt": "2026-09-17T17:44:00.254Z",
+      "id": "openai/gpt-image-2.5-sunburst",
+      "knowledgeCutoff": null,
+      "license": null,
+      "maxOutput": null,
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2.5 Sunburst",
+      "openWeights": false,
+      "params": {
+        "activeB": null,
+        "confidence": "estimated",
+        "sizeTier": 4,
+        "sizeTierBasis": "price",
+        "totalB": null
+      },
+      "pricing": {
+        "cachedInputPerMTok": 1.25,
+        "inputPerMTok": 5,
+        "outputPerMTok": 30
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.sizeTier": "derived",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-09-08",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "openai-gpt-image-2-5-sunburst",
+      "trainingComputeFlop": null,
+      "vendorId": "openai"
+    },
+    {
+      "benchmarks": {
         "aime": 88.89,
         "arc_agi_2": null,
         "eci": 140.1,
@@ -78450,6 +78592,105 @@
       "slug": "sdaia-allam-2-7b",
       "trainingComputeFlop": null,
       "vendorId": "sdaia"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": null,
+        "reasoning": null,
+        "structuredOutput": null,
+        "toolCall": null
+      },
+      "coding": [
+        {
+          "attribution": "third-party",
+          "league": "livebench_coding",
+          "score": 82.15,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "livebench_agentic_coding",
+          "score": 54.7,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        }
+      ],
+      "contextWindow": 262144,
+      "firstSeenAt": "2026-09-17T17:44:00.254Z",
+      "id": "stealth/union-alpha",
+      "knowledgeCutoff": null,
+      "license": null,
+      "maxOutput": 131072,
+      "modalities": {
+        "input": [
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Union Alpha",
+      "openWeights": null,
+      "params": {
+        "activeB": null,
+        "confidence": "unknown",
+        "totalB": null
+      },
+      "pricing": {
+        "cachedInputPerMTok": null,
+        "inputPerMTok": null,
+        "outputPerMTok": null
+      },
+      "provenance": {
+        "coding": "derived",
+        "contextWindow": "openrouter",
+        "maxOutput": "openrouter",
+        "modalities": "openrouter",
+        "name": "derived",
+        "releaseDate": "openrouter",
+        "releaseDatePrecision": "openrouter",
+        "scores": "derived",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-09-16",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [
+        {
+          "attribution": "third-party",
+          "league": "livebench_agentic_coding",
+          "score": 54.7,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        },
+        {
+          "attribution": "third-party",
+          "league": "livebench_coding",
+          "score": 82.15,
+          "source": "livebench",
+          "sourceUrl": "https://livebench.ai/#/?release=2026-06-25",
+          "unit": "pct"
+        }
+      ],
+      "slug": "stealth-union-alpha",
+      "trainingComputeFlop": null,
+      "vendorId": "stealth"
     },
     {
       "benchmarks": {
@@ -87689,37 +87930,37 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "ZIP 87 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 76 个；训练算力 309 行；去重后 407 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "请求 155 个开源模型，成功 151，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
-      "note": "4110 条（对话类 3343 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
+      "note": "4111 条（对话类 3344 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
-      "note": "models.json 403 条；api.json 220 provider / 7843 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
+      "note": "models.json 405 条；api.json 221 provider / 7845 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "444 条；已剔除 artificial_analysis 187 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
@@ -87729,7 +87970,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-09-17T06:35:44.025Z",
+      "fetchedAt": "2026-09-17T17:44:00.254Z",
       "note": "374 条（language 247 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
@@ -88104,6 +88345,16 @@
       "motif": "dune",
       "name": "Sdaia",
       "nameZh": "SDAIA"
+    },
+    {
+      "accentColor": "#7c8da6",
+      "continent": "west",
+      "country": "ZZ",
+      "homepage": null,
+      "id": "stealth",
+      "motif": "wanderer",
+      "name": "Stealth",
+      "nameZh": "Stealth"
     },
     {
       "accentColor": "#1a56db",
