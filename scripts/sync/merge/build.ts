@@ -896,6 +896,10 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
       // （新字段第一次上线时必然如此）。不补这个默认值，往生堂里的角色就会拿到 undefined，
       // 契约上说好的「空数组表示确实没查到成绩」就成了「字段不存在」。
       coding: prev.coding ?? [],
+      // slug 要按当前规则重算，不能照搬。退役模型一样会生成详情页，
+      // 而 slug 的生成规则是会演进的（比如后来禁掉了点号）。照搬旧值会留下
+      // 一批「规则改了但幽灵没跟上」的页面，在严格静态托管上就是 404。
+      slug: toSlug(prev.id),
       retiredAt: prev.retiredAt ?? runDate,
       provenance: { ...prev.provenance, retiredAt: 'derived' },
     });
