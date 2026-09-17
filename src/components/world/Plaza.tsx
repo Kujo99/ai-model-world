@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import { ModelRoom } from '@/components/character/ModelRoom';
 import { buildScales, buildVisualPruning, rankByEci, visualOf } from '@/lib/derive';
 import { assignTraits, buildTraitContext } from '@/lib/traits';
 import { buildAptitudeScale } from '@/lib/aptitude';
 import { buildPersonaContext, personaFor } from '@/lib/persona';
+import { newerThanFlagship } from '@/lib/roster';
 import type { ContinentRoster, PlazaTier, RosterEntry } from '@/lib/roster';
 import type { Continent, ModelRecord, Vendor } from '@/lib/types';
 import { getDict, type Lang } from '@/lib/i18n';
@@ -74,6 +76,30 @@ function Signpost({ tier, count, lang }: { tier: PlazaTier; count: number; lang:
   );
 }
 
+/**
+ * 「本家更新」便条，钉在屋子下沿。
+ *
+ * 屋里站的是这家当下最强的一位，这是对的；但读者看到自己刚在新闻里读到的型号
+ * 不在广场上，第一反应是「这站没更新」。便条把事实说出来，并给一条直达的路。
+ *
+ * 为什么在屋子外面而不是名牌里加一行：整间屋子本身就是一个指向门面的链接，
+ * 链接里不能再嵌链接。做成屋子的兄弟节点，HTML 合法，两个点击目标也不会打架。
+ */
+function NewerNote({ model, lang }: { model: ModelRecord; lang: Lang }) {
+  const dict = getDict(lang);
+  return (
+    <Link
+      href={`/model/${model.slug}/`}
+      title={dict.plaza.newerHint(model.name, model.releaseDate ?? '未知日期')}
+      className="mt-1 flex items-center gap-1 border-2 border-t-0 border-[var(--color-ink)] px-2 py-1 text-[12px] leading-tight text-[var(--color-parchment-dim)] transition-colors hover:text-[var(--color-gold)]"
+      style={{ background: 'rgb(255 255 255 / 0.04)' }}
+    >
+      <span className="shrink-0 text-[var(--color-gold)]">▲</span>
+      <span className="truncate">{dict.plaza.newer(model.name)}</span>
+    </Link>
+  );
+}
+
 interface PlazaProps {
   rosters: ContinentRoster[];
   allModels: ModelRecord[];
@@ -117,22 +143,35 @@ export function Plaza({
   // 广场上这几十个当家门面里占八成才说明这个视觉元素失效了
   const pruning = buildVisualPruning(displayed, scales);
 
-  const renderRoom = (continent: Continent, entry: RosterEntry) => (
-    <ModelRoom
-      key={entry.model.id}
-      model={entry.model}
-      visual={visualOf(entry.model, ranks.get(entry.model.id) ?? null, now, scales)}
-      continent={continent}
-      lang={lang}
-      hasSprite={spriteSlugs.has(entry.model.slug)}
-      traits={traitMap.get(entry.model.id) ?? []}
-      scales={scales}
-      overlaysNeeded={overlaysNeeded}
-      aptitude={aptitude.rowOf(entry.model)}
-      persona={personaFor(entry.model, personaCtx)}
-      pruning={pruning}
-    />
-  );
+  // 「本家更新」那行提示要在同厂全部模型里找，而不是只在广场阵容里找
+  const byVendor = new Map<string, ModelRecord[]>();
+  for (const m of allModels) {
+    const list = byVendor.get(m.vendorId);
+    if (list) list.push(m);
+    else byVendor.set(m.vendorId, [m]);
+  }
+
+  const renderRoom = (continent: Continent, entry: RosterEntry) => {
+    const newer = newerThanFlagship(entry.model, byVendor.get(entry.model.vendorId) ?? []);
+    return (
+      <div key={entry.model.id}>
+        <ModelRoom
+          model={entry.model}
+          visual={visualOf(entry.model, ranks.get(entry.model.id) ?? null, now, scales)}
+          continent={continent}
+          lang={lang}
+          hasSprite={spriteSlugs.has(entry.model.slug)}
+          traits={traitMap.get(entry.model.id) ?? []}
+          scales={scales}
+          overlaysNeeded={overlaysNeeded}
+          aptitude={aptitude.rowOf(entry.model)}
+          persona={personaFor(entry.model, personaCtx)}
+          pruning={pruning}
+        />
+        {newer && <NewerNote model={newer} lang={lang} />}
+      </div>
+    );
+  };
 
   const byContinent = new Map(rosters.map((r) => [r.continent, r]));
 

@@ -314,6 +314,38 @@ export function pickFlagship(
 }
 
 /**
+ * 本家有没有比门面更新、但没资格接班的型号。
+ *
+ * 门面按实力选，这是对的；代价是 Epoch 评测滞后时，厂商刚发的型号会暂时看不见。
+ * 典型案例：DeepSeek V4.1 Flash 发布于 09-08 却没有 ECI，而 `findSuccessor` 认定
+ * 它比在位的 V4 Pro 0813 便宜一档、属于小杯线而非接班人——判断没错，但读者的第一反应
+ * 是「这站怎么没更新」。屋子上那行小字就是补这个缺口：不动选拔结果，只说出事实。
+ *
+ * 门槛沿用接班规则的 `SUCCESSION_MIN_DAYS`，因为要挡的是同一件事——
+ * 上游同一模型的多条别名记录往往只差一两天，不加门槛会让几乎每间屋子都挂上这行字。
+ */
+export function newerThanFlagship(
+  flagship: ModelRecord,
+  vendorModels: ModelRecord[],
+): ModelRecord | null {
+  const flagDay = releaseDay(flagship);
+  if (flagDay == null) return null;
+
+  const alive = vendorModels.filter((m) => !m.retiredAt);
+  const candidates = alive.filter((m) => {
+    if (m.id === flagship.id || !couldBeFlagship(m) || !hasCoreData(m)) return false;
+    if (isServiceTierAlias(m, alive)) return false;
+    const day = releaseDay(m);
+    return day != null && (day - flagDay) / 86_400_000 >= SUCCESSION_MIN_DAYS;
+  });
+
+  if (candidates.length === 0) return null;
+  return candidates.sort(
+    (a, b) => (b.releaseDate ?? '').localeCompare(a.releaseDate ?? '') || a.id.localeCompare(b.id),
+  )[0];
+}
+
+/**
  * 广场上的街区。按**厂商实力**（该厂全部存活模型里的最高 ECI）分三档：
  * `top` 是最强模型进了全球前十的厂商，`main` 是参加过综合评测的其余厂商，
  * `unscored` 是一个第三方综合评测分都没有的。

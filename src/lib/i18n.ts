@@ -125,6 +125,9 @@ export interface Dict {
       main: string;
       unscored: string;
     };
+    /** 本家有更新的型号、但它没资格换下门面时，屋子下面那条提示 */
+    newer: (name: string) => string;
+    newerHint: (name: string, date: string) => string;
   };
 
   /** 首屏「今日格局」冠军横条 */
@@ -285,6 +288,11 @@ const zh: Dict = {
       main: '参加过第三方综合评测的厂商',
       unscored: '还没有任何第三方综合评测成绩',
     },
+    newer: (name) => `本家更新：${name}`,
+    newerHint: (name, date) =>
+      `${name} 发布于 ${date}，比屋里这位更新。\n` +
+      '屋里站的是这家当下实力最强的一位，而新型号往往还没拿到第三方评测成绩，\n' +
+      '所以不会仅因为「更新」就换人。点这行可以直接去看它。',
   },
 
   champions: {
