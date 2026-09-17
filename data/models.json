@@ -1117,8 +1117,150 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-09-16T08:50:16.705Z",
+  "generatedAt": "2026-09-17T02:56:47.221Z",
   "models": [
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": false,
+        "reasoning": false,
+        "structuredOutput": true,
+        "toolCall": true
+      },
+      "coding": [],
+      "contextWindow": 256000,
+      "firstSeenAt": "2026-09-17T02:56:47.221Z",
+      "id": "ai21/jamba-large",
+      "knowledgeCutoff": "2024-08-22",
+      "license": null,
+      "maxOutput": 4096,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jamba Large",
+      "openWeights": true,
+      "params": {
+        "activeB": null,
+        "confidence": "exact",
+        "totalB": 398.56
+      },
+      "pricing": {
+        "cachedInputPerMTok": null,
+        "inputPerMTok": 2,
+        "outputPerMTok": 8
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.structuredOutput": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "knowledgeCutoff": "models.dev",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.totalB": "huggingface",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2025-07-01",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "ai21-jamba-large",
+      "trainingComputeFlop": null,
+      "vendorId": "ai21"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": false,
+        "reasoning": false,
+        "structuredOutput": true,
+        "toolCall": true
+      },
+      "coding": [],
+      "contextWindow": 256000,
+      "firstSeenAt": "2026-09-17T02:56:47.221Z",
+      "id": "ai21/jamba-mini",
+      "knowledgeCutoff": "2024-08-22",
+      "license": null,
+      "maxOutput": 4096,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jamba Mini",
+      "openWeights": true,
+      "params": {
+        "activeB": null,
+        "confidence": "exact",
+        "totalB": 51.57
+      },
+      "pricing": {
+        "cachedInputPerMTok": null,
+        "inputPerMTok": 0.2,
+        "outputPerMTok": 0.4
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.structuredOutput": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "knowledgeCutoff": "models.dev",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.totalB": "huggingface",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-01-01",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "ai21-jamba-mini",
+      "trainingComputeFlop": null,
+      "vendorId": "ai21"
+    },
     {
       "benchmarks": {
         "aime": null,
@@ -1142,7 +1284,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "aisingapore/gemma-sea-lion-v4-27b-it",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "LicenseRef-Gemma",
       "maxOutput": 128000,
       "modalities": {
         "input": [
@@ -1156,8 +1298,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 27
+        "confidence": "exact",
+        "totalB": 27.43
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -1169,11 +1311,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -2467,8 +2610,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 72
+        "confidence": "exact",
+        "totalB": 73.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.4,
@@ -2485,7 +2628,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -2573,8 +2716,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 0.5
+        "confidence": "exact",
+        "totalB": 0.49
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -2586,12 +2729,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -2639,7 +2782,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen2.5-coder-32b-instruct",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 8192,
       "modalities": {
         "input": [
@@ -2653,8 +2796,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 32.76
       },
       "pricing": {
         "cachedInputPerMTok": 0.1003,
@@ -2668,11 +2811,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -2949,7 +3093,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-235b-a22b",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -2963,8 +3107,8 @@
       "openWeights": true,
       "params": {
         "activeB": 22,
-        "confidence": "estimated",
-        "totalB": 235
+        "confidence": "exact",
+        "totalB": 235.09
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -2984,12 +3128,13 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -3242,8 +3387,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.0175,
-        "inputPerMTok": 0.22,
-        "outputPerMTok": 0.88
+        "inputPerMTok": 0.0875,
+        "outputPerMTok": 0.35
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -3499,8 +3644,8 @@
       "openWeights": true,
       "params": {
         "activeB": 22,
-        "confidence": "estimated",
-        "totalB": 235
+        "confidence": "exact",
+        "totalB": 235.09
       },
       "pricing": {
         "cachedInputPerMTok": 0.065,
@@ -3518,13 +3663,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -4283,7 +4428,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-30b-a3b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -4297,8 +4442,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 30
+        "confidence": "exact",
+        "totalB": 30.53
       },
       "pricing": {
         "cachedInputPerMTok": 0.0216,
@@ -4314,12 +4459,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -4764,7 +4910,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-32b",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -4778,8 +4924,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 32.76
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -4796,11 +4942,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -5221,7 +5368,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-coder-30b-a3b-instruct",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -5235,8 +5382,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 30
+        "confidence": "exact",
+        "totalB": 30.53
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -5249,12 +5396,13 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -5357,7 +5505,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-coder-480b-a35b-instruct",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -5371,8 +5519,8 @@
       "openWeights": true,
       "params": {
         "activeB": 35,
-        "confidence": "estimated",
-        "totalB": 480
+        "confidence": "exact",
+        "totalB": 480.15
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -5388,12 +5536,13 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -5579,7 +5728,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-coder-next",
       "knowledgeCutoff": "2025-09",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -5593,8 +5742,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 79.67
       },
       "pricing": {
         "cachedInputPerMTok": 0.07,
@@ -5608,10 +5757,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -6343,7 +6494,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-next-80b-a3b-instruct",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -6357,8 +6508,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 80
+        "confidence": "exact",
+        "totalB": 81.32
       },
       "pricing": {
         "cachedInputPerMTok": 0.07,
@@ -6372,12 +6523,13 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -6434,7 +6586,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-next-80b-a3b-thinking",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -6448,8 +6600,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 80
+        "confidence": "exact",
+        "totalB": 81.32
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -6462,12 +6614,13 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -6505,7 +6658,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-vl-235b-a22b-instruct",
       "knowledgeCutoff": "2025-03-31",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -6520,8 +6673,8 @@
       "openWeights": true,
       "params": {
         "activeB": 22,
-        "confidence": "estimated",
-        "totalB": 235
+        "confidence": "exact",
+        "totalB": 235.67
       },
       "pricing": {
         "cachedInputPerMTok": 0.11,
@@ -6535,12 +6688,13 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -6579,7 +6733,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3-vl-235b-a22b-thinking",
       "knowledgeCutoff": "2025-03-31",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -6594,8 +6748,8 @@
       "openWeights": true,
       "params": {
         "activeB": 22,
-        "confidence": "estimated",
-        "totalB": 235
+        "confidence": "exact",
+        "totalB": 235.67
       },
       "pricing": {
         "cachedInputPerMTok": 0.0574,
@@ -6609,12 +6763,13 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -6654,7 +6809,7 @@
       "id": "alibaba/qwen3-vl-30b-a3b-instruct",
       "knowledgeCutoff": null,
       "license": null,
-      "maxOutput": 16384,
+      "maxOutput": 32768,
       "modalities": {
         "input": [
           "image",
@@ -6673,8 +6828,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.15,
-        "outputPerMTok": 0.6
+        "inputPerMTok": 0.13,
+        "outputPerMTok": 0.52
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -7211,7 +7366,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.5-122b-a10b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -7228,8 +7383,8 @@
       "openWeights": true,
       "params": {
         "activeB": 10,
-        "confidence": "estimated",
-        "totalB": 122
+        "confidence": "exact",
+        "totalB": 125.09
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -7244,12 +7399,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -7354,7 +7510,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.5-27b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -7371,8 +7527,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 27
+        "confidence": "exact",
+        "totalB": 27.78
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -7388,11 +7544,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -7497,7 +7654,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.5-35b-a3b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -7514,8 +7671,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 35
+        "confidence": "exact",
+        "totalB": 35.95
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -7532,12 +7689,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -7666,7 +7824,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.5-397b-a17b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -7683,8 +7841,8 @@
       "openWeights": true,
       "params": {
         "activeB": 17,
-        "confidence": "estimated",
-        "totalB": 397
+        "confidence": "exact",
+        "totalB": 403.4
       },
       "pricing": {
         "cachedInputPerMTok": 0.225,
@@ -7702,12 +7860,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "openrouter",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -7837,7 +7996,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.5-9b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -7853,8 +8012,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 9
+        "confidence": "exact",
+        "totalB": 9.65
       },
       "pricing": {
         "cachedInputPerMTok": 0.025,
@@ -7871,11 +8030,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -9093,7 +9253,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.6-27b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -9110,8 +9270,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 27
+        "confidence": "exact",
+        "totalB": 27.78
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -9129,11 +9289,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "openrouter",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -9295,7 +9456,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.6-35b-a3b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -9312,8 +9473,8 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 35
+        "confidence": "exact",
+        "totalB": 35.95
       },
       "pricing": {
         "cachedInputPerMTok": 0.05,
@@ -9332,12 +9493,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -10884,8 +11046,8 @@
       "openWeights": true,
       "params": {
         "activeB": 95,
-        "confidence": "estimated",
-        "totalB": 2400
+        "confidence": "exact",
+        "totalB": 2446.18
       },
       "pricing": {
         "cachedInputPerMTok": 0.25,
@@ -10903,7 +11065,7 @@
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -10975,7 +11137,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwen3.8-27b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -10991,11 +11153,11 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 27
+        "confidence": "exact",
+        "totalB": 27.78
       },
       "pricing": {
-        "cachedInputPerMTok": 0.085,
+        "cachedInputPerMTok": 0.05,
         "inputPerMTok": 0.4,
         "outputPerMTok": 2.55
       },
@@ -11008,11 +11170,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -11217,8 +11380,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 180
       },
       "pricing": {
         "cachedInputPerMTok": 0.05,
@@ -11237,6 +11400,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -12055,7 +12219,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "alibaba/qwq-32b",
       "knowledgeCutoff": "2024-04",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 8192,
       "modalities": {
         "input": [
@@ -12069,8 +12233,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 32.76
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -12087,11 +12251,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -22671,8 +22836,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 398.64
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -22690,6 +22855,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "scores": "derived",
@@ -22774,8 +22940,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 398.64
       },
       "pricing": {
         "cachedInputPerMTok": 0.06,
@@ -22794,6 +22960,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -22872,8 +23039,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 26.12
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -22890,6 +23057,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -22941,8 +23109,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 6.12
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -22958,6 +23126,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -24012,8 +24181,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 32.3
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24024,12 +24193,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -24079,8 +24248,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.03
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24091,12 +24260,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -24147,8 +24316,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 33.14
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24159,12 +24328,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -24215,8 +24384,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.63
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24227,12 +24396,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -24371,7 +24540,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "cohere/command-a-03-2025",
       "knowledgeCutoff": "2024-06-01",
-      "license": null,
+      "license": "CC-BY-NC-4.0",
       "maxOutput": 8000,
       "modalities": {
         "input": [
@@ -24385,8 +24554,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 111.06
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24400,10 +24569,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -24790,7 +24961,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "cohere/command-r-08-2024",
       "knowledgeCutoff": "2024-06-01",
-      "license": null,
+      "license": "CC-BY-NC-4.0",
       "maxOutput": 4000,
       "modalities": {
         "input": [
@@ -24804,8 +24975,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 32.3
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24819,10 +24990,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -24886,7 +25059,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "cohere/command-r-plus-08-2024",
       "knowledgeCutoff": "2024-06-01",
-      "license": null,
+      "license": "CC-BY-NC-4.0",
       "maxOutput": 4000,
       "modalities": {
         "input": [
@@ -24900,8 +25073,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 103.81
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -24915,10 +25088,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -24982,7 +25157,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "cohere/command-r7b-12-2024",
       "knowledgeCutoff": "2024-06-01",
-      "license": null,
+      "license": "CC-BY-NC-4.0",
       "maxOutput": 4000,
       "modalities": {
         "input": [
@@ -24996,8 +25171,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 8.03
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -25010,10 +25185,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -25051,7 +25228,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "cohere/command-r7b-arabic-02-2025",
       "knowledgeCutoff": "2024-06-01",
-      "license": null,
+      "license": "CC-BY-NC-4.0",
       "maxOutput": 4000,
       "modalities": {
         "input": [
@@ -25065,8 +25242,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 8.03
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -25079,10 +25256,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -25356,8 +25535,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 35
+        "confidence": "exact",
+        "totalB": 35.11
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -25371,11 +25550,11 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "scores": "derived",
@@ -25525,8 +25704,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 397
+        "confidence": "exact",
+        "totalB": 396.8
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -25540,11 +25719,11 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "scores": "derived",
@@ -25694,8 +25873,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 9
+        "confidence": "exact",
+        "totalB": 9.41
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -25709,11 +25888,11 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "scores": "derived",
@@ -25814,11 +25993,11 @@
       "openWeights": true,
       "params": {
         "activeB": 3,
-        "confidence": "estimated",
-        "totalB": 35
+        "confidence": "exact",
+        "totalB": 35.95
       },
       "pricing": {
-        "cachedInputPerMTok": 0.01,
+        "cachedInputPerMTok": 0.03,
         "inputPerMTok": 0.1,
         "outputPerMTok": 0.4
       },
@@ -25828,12 +26007,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -25897,7 +26076,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-chat",
       "knowledgeCutoff": "2025-09",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 384000,
       "modalities": {
         "input": [
@@ -25911,8 +26090,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 681.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.02,
@@ -25932,10 +26111,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -27031,7 +27212,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-r1",
       "knowledgeCutoff": "2024-07",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -27045,8 +27226,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 680.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.2,
@@ -27065,10 +27246,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -27646,7 +27829,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-r1-distill-qwen-32b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -27660,8 +27843,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 32
+        "confidence": "exact",
+        "totalB": 32.76
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -27677,11 +27860,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -27778,7 +27962,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-reasoner",
       "knowledgeCutoff": "2025-09",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 384000,
       "modalities": {
         "input": [
@@ -27792,8 +27976,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 681.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.07,
@@ -27809,10 +27993,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -27925,8 +28111,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 680.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.07,
@@ -27950,6 +28136,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -28272,7 +28459,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-v3-0324",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 163840,
       "modalities": {
         "input": [
@@ -28286,8 +28473,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 680.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.135,
@@ -28306,10 +28493,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -28646,8 +28835,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 680.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.13,
@@ -28666,11 +28855,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -29161,8 +29351,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 681.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.13,
@@ -29183,11 +29373,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -30276,7 +30467,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-v4-flash",
       "knowledgeCutoff": "2025-05",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 384000,
       "modalities": {
         "input": [
@@ -30290,8 +30481,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 283.47
       },
       "pricing": {
         "cachedInputPerMTok": 0.003,
@@ -30312,10 +30503,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -30572,8 +30765,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 283.47
       },
       "pricing": {
         "cachedInputPerMTok": 0.028,
@@ -30593,11 +30786,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -30870,11 +31064,11 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 296.35
       },
       "pricing": {
-        "cachedInputPerMTok": 0.0252,
+        "cachedInputPerMTok": 0.028,
         "inputPerMTok": 0.14,
         "outputPerMTok": 0.28
       },
@@ -30891,11 +31085,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -31296,7 +31491,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-v4-pro",
       "knowledgeCutoff": "2025-05",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 384000,
       "modalities": {
         "input": [
@@ -31310,8 +31505,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1572.76
       },
       "pricing": {
         "cachedInputPerMTok": 0.003625,
@@ -31333,10 +31528,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -31931,8 +32128,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1623.5
       },
       "pricing": {
         "cachedInputPerMTok": 0.044,
@@ -31952,11 +32149,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -32210,8 +32408,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": 0.006,
-        "inputPerMTok": 0.255552,
-        "outputPerMTok": 1.1592
+        "inputPerMTok": 0.27,
+        "outputPerMTok": 1.2
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -40263,7 +40461,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-3-12b-it",
       "knowledgeCutoff": "2024-08",
-      "license": null,
+      "license": "LicenseRef-Gemma",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -40278,8 +40476,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 12
+        "confidence": "exact",
+        "totalB": 12.19
       },
       "pricing": {
         "cachedInputPerMTok": 0.136,
@@ -40295,11 +40493,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -40422,7 +40621,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-3-27b-it",
       "knowledgeCutoff": "2024-08",
-      "license": null,
+      "license": "LicenseRef-Gemma",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -40437,8 +40636,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 27
+        "confidence": "exact",
+        "totalB": 27.43
       },
       "pricing": {
         "cachedInputPerMTok": 0.04,
@@ -40455,11 +40654,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -40597,7 +40797,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-3-4b-it",
       "knowledgeCutoff": "2024-08",
-      "license": null,
+      "license": "LicenseRef-Gemma",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -40612,8 +40812,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 4
+        "confidence": "exact",
+        "totalB": 4.3
       },
       "pricing": {
         "cachedInputPerMTok": 0.1003,
@@ -40629,11 +40829,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -40740,7 +40941,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-4-26b-a4b-it",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -40755,8 +40956,8 @@
       "openWeights": true,
       "params": {
         "activeB": 4,
-        "confidence": "estimated",
-        "totalB": 26
+        "confidence": "exact",
+        "totalB": 25.81
       },
       "pricing": {
         "cachedInputPerMTok": 0.049,
@@ -40774,12 +40975,13 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
         "params.activeB": "derived",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -40933,7 +41135,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-4-31b-it",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -40948,8 +41150,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 31
+        "confidence": "exact",
+        "totalB": 31.27
       },
       "pricing": {
         "cachedInputPerMTok": 0.05,
@@ -40967,11 +41169,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -41124,7 +41327,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-4-e2b-it",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 8192,
       "modalities": {
         "input": [
@@ -41140,8 +41343,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 5.12
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -41154,10 +41357,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -41196,7 +41401,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "google/gemma-4-e4b-it",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 8192,
       "modalities": {
         "input": [
@@ -41212,8 +41417,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 8
       },
       "pricing": {
         "cachedInputPerMTok": 0.2,
@@ -41226,10 +41431,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -41629,8 +41836,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.06,
-        "outputPerMTok": 0.06
+        "inputPerMTok": 0.08,
+        "outputPerMTok": 0.11
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -41676,7 +41883,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "ibm/granite-4-h-micro",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -41690,8 +41897,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 3.19
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -41703,10 +41910,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -41742,7 +41951,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "ibm/granite-4-h-small",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -41756,8 +41965,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 32.21
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -41770,10 +41979,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -42103,7 +42314,7 @@
         "totalB": null
       },
       "pricing": {
-        "cachedInputPerMTok": 0.004,
+        "cachedInputPerMTok": 0.02,
         "inputPerMTok": 0.2,
         "outputPerMTok": 0.75
       },
@@ -42114,7 +42325,7 @@
         "modalities": "openrouter",
         "name": "derived",
         "params.sizeTier": "derived",
-        "pricing.cachedInputPerMTok": "openrouter",
+        "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "vercel-gateway",
@@ -42742,11 +42953,12 @@
         "pricing.outputPerMTok": "vercel-gateway",
         "releaseDate": "vercel-gateway",
         "releaseDatePrecision": "vercel-gateway",
+        "retiredAt": "derived",
         "vendorId": "derived"
       },
       "releaseDate": "2026-07-10",
       "releaseDatePrecision": "day",
-      "retiredAt": null,
+      "retiredAt": "2026-09-17",
       "scores": [],
       "slug": "kwaipilot-kat-coder-air-v2.5",
       "trainingComputeFlop": null,
@@ -42811,11 +43023,12 @@
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "vercel-gateway",
         "releaseDatePrecision": "vercel-gateway",
+        "retiredAt": "derived",
         "vendorId": "derived"
       },
       "releaseDate": "2025-11-09",
       "releaseDatePrecision": "day",
-      "retiredAt": null,
+      "retiredAt": "2026-09-17",
       "scores": [],
       "slug": "kwaipilot-kat-coder-pro-v1",
       "trainingComputeFlop": null,
@@ -42878,8 +43091,8 @@
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
-        "releaseDate": "vercel-gateway",
-        "releaseDatePrecision": "vercel-gateway",
+        "releaseDate": "openrouter",
+        "releaseDatePrecision": "openrouter",
         "vendorId": "derived"
       },
       "releaseDate": "2026-03-27",
@@ -42947,8 +43160,8 @@
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
-        "releaseDate": "vercel-gateway",
-        "releaseDatePrecision": "vercel-gateway",
+        "releaseDate": "openrouter",
+        "releaseDatePrecision": "openrouter",
         "vendorId": "derived"
       },
       "releaseDate": "2026-07-10",
@@ -43341,8 +43554,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 70
+        "confidence": "exact",
+        "totalB": 70.55
       },
       "pricing": {
         "cachedInputPerMTok": 0.8,
@@ -43362,7 +43575,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -43682,8 +43895,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.03
       },
       "pricing": {
         "cachedInputPerMTok": 0.0272,
@@ -43703,7 +43916,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -43872,8 +44085,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 11
+        "confidence": "exact",
+        "totalB": 10.67
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -43890,7 +44103,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -43961,8 +44174,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 1
+        "confidence": "exact",
+        "totalB": 1.24
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -43983,7 +44196,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -44191,8 +44404,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 3
+        "confidence": "exact",
+        "totalB": 3.21
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -44210,7 +44423,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -44511,12 +44724,12 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 70
+        "confidence": "exact",
+        "totalB": 70.55
       },
       "pricing": {
         "cachedInputPerMTok": 0.13,
-        "inputPerMTok": 0.59,
+        "inputPerMTok": 0.25,
         "outputPerMTok": 0.71
       },
       "provenance": {
@@ -44532,7 +44745,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -44850,8 +45063,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 17
+        "confidence": "exact",
+        "totalB": 401.58
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -44871,7 +45084,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -45072,8 +45285,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 17
+        "confidence": "exact",
+        "totalB": 108.64
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -45091,7 +45304,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -45153,8 +45366,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.03
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -45171,7 +45384,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -45316,8 +45529,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 30
+        "confidence": "exact",
+        "totalB": 29.78
       },
       "pricing": {
         "cachedInputPerMTok": 0.04,
@@ -45334,12 +45547,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -46481,7 +46694,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "microsoft/phi-4-mini",
       "knowledgeCutoff": "2023-10",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 4096,
       "modalities": {
         "input": [
@@ -46495,8 +46708,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 3.84
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -46509,10 +46722,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -46802,7 +47017,7 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.55,
+        "inputPerMTok": 0.4,
         "outputPerMTok": 2.2
       },
       "provenance": {
@@ -46904,8 +47119,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -46924,6 +47139,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -47139,8 +47355,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -47160,6 +47376,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -47396,8 +47613,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -47418,6 +47635,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -47608,8 +47826,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.06,
@@ -47625,6 +47843,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -47742,8 +47961,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.06,
@@ -47764,6 +47983,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -47939,8 +48159,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 227.41
       },
       "pricing": {
         "cachedInputPerMTok": 0.06,
@@ -47957,6 +48177,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -48086,8 +48307,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 426.99
       },
       "pricing": {
         "cachedInputPerMTok": 0.06,
@@ -48110,6 +48331,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -48462,8 +48684,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 22
+        "confidence": "exact",
+        "totalB": 22.25
       },
       "pricing": {
         "cachedInputPerMTok": 0.3,
@@ -48481,7 +48703,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -48675,8 +48897,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 22.25
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -48694,6 +48916,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -48850,8 +49073,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 121.8
       },
       "pricing": {
         "cachedInputPerMTok": 0.04,
@@ -48869,6 +49092,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "openrouter",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -49032,8 +49256,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 121.8
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -49050,6 +49274,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -49102,8 +49327,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 22.23
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -49116,11 +49341,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -49178,7 +49404,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/devstral-small-2507",
       "knowledgeCutoff": "2025-05",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 128000,
       "modalities": {
         "input": [
@@ -49192,8 +49418,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 23.57
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -49208,10 +49434,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -49381,8 +49609,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 23.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.25,
@@ -49397,11 +49625,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -49513,8 +49742,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 24.01
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -49530,11 +49759,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "models.dev",
@@ -49653,8 +49883,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 14
+        "confidence": "exact",
+        "totalB": 12.16
       },
       "pricing": {
         "cachedInputPerMTok": 0.02,
@@ -49666,12 +49896,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -49793,13 +50023,13 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 14
+        "confidence": "exact",
+        "totalB": 12.16
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.34617,
-        "outputPerMTok": 0.46156
+        "inputPerMTok": 0.34611,
+        "outputPerMTok": 0.46148
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -49807,12 +50037,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -49865,8 +50095,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 3
+        "confidence": "exact",
+        "totalB": 3.03
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -49879,12 +50109,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "models.dev",
@@ -49937,8 +50167,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 7.42
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -49951,12 +50181,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "models.dev",
@@ -50425,8 +50655,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.02
       },
       "pricing": {
         "cachedInputPerMTok": 0.15,
@@ -50444,7 +50674,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -50944,8 +51174,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 122.61
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -50967,6 +51197,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -51135,7 +51366,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-large-2512",
       "knowledgeCutoff": "2024-11",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 262144,
       "modalities": {
         "input": [
@@ -51169,6 +51400,7 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
@@ -51448,7 +51680,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-large-latest",
       "knowledgeCutoff": "2024-11",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 262144,
       "modalities": {
         "input": [
@@ -51482,6 +51714,7 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
@@ -52165,8 +52398,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 121.8
       },
       "pricing": {
         "cachedInputPerMTok": 0.15,
@@ -52189,6 +52422,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -52766,8 +53000,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 121.8
       },
       "pricing": {
         "cachedInputPerMTok": 0.15,
@@ -52789,6 +53023,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -52957,7 +53192,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-nemo",
       "knowledgeCutoff": "2024-07",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 128000,
       "modalities": {
         "input": [
@@ -52971,8 +53206,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 12.25
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -52986,10 +53221,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -53407,7 +53644,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-small-2506",
       "knowledgeCutoff": "2025-03",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -53422,8 +53659,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 24.01
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -53440,10 +53677,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -53565,7 +53804,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-small-2603",
       "knowledgeCutoff": "2025-06",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 256000,
       "modalities": {
         "input": [
@@ -53580,8 +53819,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 117.88
       },
       "pricing": {
         "cachedInputPerMTok": 0.015,
@@ -53597,10 +53836,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -53698,7 +53939,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-small-3-1-24b-instruct-2503",
       "knowledgeCutoff": "2024-06",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -53713,8 +53954,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 24
+        "confidence": "exact",
+        "totalB": 24.01
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -53728,11 +53969,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -53857,8 +54099,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.075,
-        "outputPerMTok": 0.2
+        "inputPerMTok": 0.09375,
+        "outputPerMTok": 0.25
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -53939,7 +54181,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/mistral-small-latest",
       "knowledgeCutoff": "2025-06",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 256000,
       "modalities": {
         "input": [
@@ -53954,8 +54196,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 117.88
       },
       "pricing": {
         "cachedInputPerMTok": 0.015,
@@ -53971,10 +54213,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -54186,7 +54430,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "mistral/pixtral-12b",
       "knowledgeCutoff": "2024-09",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 128000,
       "modalities": {
         "input": [
@@ -54215,6 +54459,7 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
@@ -54444,8 +54689,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 3
+        "confidence": "exact",
+        "totalB": 4.67
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -54456,12 +54701,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -54512,8 +54757,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 24
+        "confidence": "exact",
+        "totalB": 24.26
       },
       "pricing": {
         "cachedInputPerMTok": 0.01,
@@ -54525,12 +54770,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -55161,8 +55406,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.15,
@@ -55183,6 +55428,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -55367,8 +55613,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.15,
@@ -55389,6 +55635,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -55567,8 +55814,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -55593,6 +55840,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -55915,8 +56163,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.16,
@@ -55941,6 +56189,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -56294,8 +56543,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.19,
@@ -56318,6 +56567,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -56550,8 +56800,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1014.69
       },
       "pricing": {
         "cachedInputPerMTok": 0.38,
@@ -56569,6 +56819,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -57290,6 +57541,78 @@
       "slug": "morph-morph-v3-large",
       "trainingComputeFlop": null,
       "vendorId": "morph"
+    },
+    {
+      "benchmarks": {
+        "aime": null,
+        "arc_agi_2": null,
+        "eci": null,
+        "fiction_live": null,
+        "gpqa_diamond": null,
+        "swe_bench_pro": null,
+        "swe_bench_vendor": null,
+        "swe_bench_verified": null,
+        "webdev_arena_elo": null
+      },
+      "capabilities": {
+        "promptCaching": true,
+        "reasoning": true,
+        "structuredOutput": false,
+        "toolCall": true
+      },
+      "coding": [],
+      "contextWindow": 262144,
+      "firstSeenAt": "2026-09-17T02:56:47.221Z",
+      "id": "motif-technologies/motif-3",
+      "knowledgeCutoff": null,
+      "license": "MIT",
+      "maxOutput": 262144,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Motif 3",
+      "openWeights": true,
+      "params": {
+        "activeB": null,
+        "confidence": "exact",
+        "totalB": 314.84
+      },
+      "pricing": {
+        "cachedInputPerMTok": 0.2,
+        "inputPerMTok": 0.5,
+        "outputPerMTok": 2
+      },
+      "provenance": {
+        "capabilities.promptCaching": "derived",
+        "capabilities.reasoning": "models.dev",
+        "capabilities.structuredOutput": "models.dev",
+        "capabilities.toolCall": "models.dev",
+        "contextWindow": "models.dev",
+        "license": "huggingface",
+        "maxOutput": "models.dev",
+        "modalities": "models.dev",
+        "name": "models.dev",
+        "openWeights": "models.dev",
+        "params.totalB": "huggingface",
+        "pricing.cachedInputPerMTok": "models.dev",
+        "pricing.inputPerMTok": "models.dev",
+        "pricing.outputPerMTok": "models.dev",
+        "releaseDate": "models.dev",
+        "releaseDatePrecision": "models.dev",
+        "vendorId": "derived"
+      },
+      "releaseDate": "2026-08-07",
+      "releaseDatePrecision": "day",
+      "retiredAt": null,
+      "scores": [],
+      "slug": "motif-technologies-motif-3",
+      "trainingComputeFlop": null,
+      "vendorId": "motif-technologies"
     },
     {
       "benchmarks": {
@@ -58201,7 +58524,7 @@
         "totalB": 30
       },
       "pricing": {
-        "cachedInputPerMTok": 0.03,
+        "cachedInputPerMTok": 0.025,
         "inputPerMTok": 0.05,
         "outputPerMTok": 0.2
       },
@@ -58216,7 +58539,7 @@
         "openWeights": "models.dev",
         "params.activeB": "derived",
         "params.totalB": "derived",
-        "pricing.cachedInputPerMTok": "openrouter",
+        "pricing.cachedInputPerMTok": "vercel-gateway",
         "pricing.inputPerMTok": "litellm",
         "pricing.outputPerMTok": "litellm",
         "releaseDate": "openrouter",
@@ -67631,9 +67954,9 @@
         "modalities": "openrouter",
         "name": "derived",
         "params.sizeTier": "derived",
-        "pricing.cachedInputPerMTok": "litellm",
-        "pricing.inputPerMTok": "litellm",
-        "pricing.outputPerMTok": "litellm",
+        "pricing.cachedInputPerMTok": "openrouter",
+        "pricing.inputPerMTok": "openrouter",
+        "pricing.outputPerMTok": "openrouter",
         "releaseDate": "openrouter",
         "releaseDatePrecision": "openrouter",
         "scores": "derived",
@@ -73754,7 +74077,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "openai/gpt-oss-120b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -73768,8 +74091,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 120
+        "confidence": "exact",
+        "totalB": 114.66
       },
       "pricing": {
         "cachedInputPerMTok": 0.032,
@@ -73786,11 +74109,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -74017,7 +74341,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "openai/gpt-oss-20b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -74031,13 +74355,13 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 20
+        "confidence": "exact",
+        "totalB": 19.11
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
         "inputPerMTok": 0.05,
-        "outputPerMTok": 0.2
+        "outputPerMTok": 0.19999999999999998
       },
       "provenance": {
         "benchmarks.aime": "epoch.ai",
@@ -74049,11 +74373,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -74175,7 +74500,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "openai/gpt-oss-safeguard-120b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -74189,8 +74514,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 120
+        "confidence": "exact",
+        "totalB": 118.24
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -74203,11 +74528,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -74245,7 +74571,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "openai/gpt-oss-safeguard-20b",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -74259,8 +74585,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 20
+        "confidence": "exact",
+        "totalB": 19.71
       },
       "pricing": {
         "cachedInputPerMTok": 0.0375,
@@ -74273,11 +74599,12 @@
         "capabilities.structuredOutput": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -76254,8 +76581,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 1
+        "confidence": "exact",
+        "totalB": 1.08
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -76266,12 +76593,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -76321,8 +76648,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 2
+        "confidence": "exact",
+        "totalB": 2.52
       },
       "pricing": {
         "cachedInputPerMTok": 0.124,
@@ -76334,12 +76661,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -78156,7 +78483,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "stepfun/step-3.5-flash",
       "knowledgeCutoff": "2025-01",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 256000,
       "modalities": {
         "input": [
@@ -78170,8 +78497,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 199.38
       },
       "pricing": {
         "cachedInputPerMTok": 0.02,
@@ -78186,10 +78513,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -78238,7 +78567,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "stepfun/step-3.5-flash-2603",
       "knowledgeCutoff": "2025-01",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 256000,
       "modalities": {
         "input": [
@@ -78252,8 +78581,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 199.38
       },
       "pricing": {
         "cachedInputPerMTok": 0.02,
@@ -78266,10 +78595,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -78349,7 +78680,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "stepfun/step-3.7-flash",
       "knowledgeCutoff": "2026-03-01",
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 256000,
       "modalities": {
         "input": [
@@ -78365,8 +78696,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 201.37
       },
       "pricing": {
         "cachedInputPerMTok": 0.037,
@@ -78382,10 +78713,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -78488,8 +78821,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 70
+        "confidence": "exact",
+        "totalB": 70.6
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -78502,12 +78835,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
         "releaseDate": "models.dev",
@@ -78559,8 +78892,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 8
+        "confidence": "exact",
+        "totalB": 8.05
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -78572,12 +78905,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -79093,7 +79426,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "tencent/hy3",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "Apache-2.0",
       "maxOutput": 128000,
       "modalities": {
         "input": [
@@ -79107,8 +79440,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 298.79
       },
       "pricing": {
         "cachedInputPerMTok": 0.035,
@@ -79122,10 +79455,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -79197,8 +79532,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 298.79
       },
       "pricing": {
         "cachedInputPerMTok": 0.058,
@@ -79216,6 +79551,7 @@
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -79390,8 +79726,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 952.38
       },
       "pricing": {
         "cachedInputPerMTok": 0.374,
@@ -79409,11 +79745,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -79648,8 +79985,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 265.96
       },
       "pricing": {
         "cachedInputPerMTok": 0.1,
@@ -79667,11 +80004,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -79831,8 +80169,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "totalB": 12
+        "confidence": "exact",
+        "totalB": 12.19
       },
       "pricing": {
         "cachedInputPerMTok": null,
@@ -79843,11 +80181,11 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.totalB": "derived",
+        "params.totalB": "huggingface",
         "releaseDate": "models.dev",
         "releaseDatePrecision": "models.dev",
         "vendorId": "derived"
@@ -83692,7 +84030,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "xiaomi/mimo-v2-flash",
       "knowledgeCutoff": "2024-12-01",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 65536,
       "modalities": {
         "input": [
@@ -83706,8 +84044,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 306.66
       },
       "pricing": {
         "cachedInputPerMTok": 0.0028,
@@ -83720,10 +84058,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -83948,7 +84288,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "xiaomi/mimo-v2.5",
       "knowledgeCutoff": "2024-12",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -83965,8 +84305,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 306.66
       },
       "pricing": {
         "cachedInputPerMTok": 0.0028,
@@ -83979,10 +84319,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84038,7 +84380,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "xiaomi/mimo-v2.5-pro",
       "knowledgeCutoff": "2024-12",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -84052,8 +84394,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 1013.57
       },
       "pricing": {
         "cachedInputPerMTok": 0.0036,
@@ -84069,10 +84411,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84129,7 +84473,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "xiaomi/mimo-v2.5-pro-ultraspeed",
       "knowledgeCutoff": "2024-12",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -84143,8 +84487,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 531.35
       },
       "pricing": {
         "cachedInputPerMTok": 0.0108,
@@ -84157,10 +84501,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84232,7 +84578,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.5",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 98304,
       "modalities": {
         "input": [
@@ -84246,8 +84592,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 358.34
       },
       "pricing": {
         "cachedInputPerMTok": 0.11,
@@ -84261,10 +84607,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84387,7 +84735,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.5-air",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 98304,
       "modalities": {
         "input": [
@@ -84401,8 +84749,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 110.47
       },
       "pricing": {
         "cachedInputPerMTok": 0.03,
@@ -84416,10 +84764,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84562,7 +84912,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.5v",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 16384,
       "modalities": {
         "input": [
@@ -84578,8 +84928,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 107.71
       },
       "pricing": {
         "cachedInputPerMTok": 0.11,
@@ -84592,10 +84942,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84683,7 +85035,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.6",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -84697,8 +85049,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 356.79
       },
       "pricing": {
         "cachedInputPerMTok": 0.11,
@@ -84715,10 +85067,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84865,7 +85219,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.6v",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -84881,8 +85235,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 107.71
       },
       "pricing": {
         "cachedInputPerMTok": 0.055,
@@ -84896,10 +85250,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -84956,7 +85312,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.6v-flash",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 32768,
       "modalities": {
         "input": [
@@ -84972,8 +85328,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 10.29
       },
       "pricing": {
         "cachedInputPerMTok": 0.0043,
@@ -84985,10 +85341,12 @@
         "capabilities.reasoning": "models.dev",
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -85076,7 +85434,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.7",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -85090,8 +85448,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 358.34
       },
       "pricing": {
         "cachedInputPerMTok": 0.11,
@@ -85110,10 +85468,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -85324,7 +85684,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.7-flash",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -85338,8 +85698,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 31.22
       },
       "pricing": {
         "cachedInputPerMTok": 0.01,
@@ -85354,10 +85714,12 @@
         "coding": "derived",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "litellm",
         "pricing.inputPerMTok": "openrouter",
         "pricing.outputPerMTok": "litellm",
@@ -85406,7 +85768,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-4.7-flashx",
       "knowledgeCutoff": "2025-04",
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -85420,8 +85782,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 31.22
       },
       "pricing": {
         "cachedInputPerMTok": 0.01,
@@ -85434,10 +85796,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -85557,7 +85921,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-5",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -85571,8 +85935,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 753.86
       },
       "pricing": {
         "cachedInputPerMTok": 0.2,
@@ -85592,10 +85956,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -85935,7 +86301,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-5.1",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -85949,8 +86315,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 753.86
       },
       "pricing": {
         "cachedInputPerMTok": 0.26,
@@ -85969,10 +86335,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -86286,7 +86654,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "zhipuai/glm-5.2",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 131072,
       "modalities": {
         "input": [
@@ -86300,8 +86668,8 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 753.33
       },
       "pricing": {
         "cachedInputPerMTok": 0.26,
@@ -86322,10 +86690,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -87319,38 +87689,38 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
       "note": "ZIP 87 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 76 个；训练算力 309 行；去重后 407 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": null,
-      "note": "探针 Qwen/Qwen3-235B-A22B 不可达（fetch failed (ECONNRESET)）：整段跳过，参数量与许可证留空",
-      "ok": false
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
+      "note": "请求 155 个开源模型，成功 151，失败 4",
+      "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
-      "note": "4029 条（对话类 3274 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
+      "note": "4110 条（对话类 3343 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
-      "note": "models.json 400 条；api.json 217 provider / 7824 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
+      "note": "models.json 403 条；api.json 220 provider / 7842 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
-      "note": "443 条；已剔除 artificial_analysis 185 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
+      "note": "444 条；已剔除 artificial_analysis 187 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
     "override": {
@@ -87359,12 +87729,22 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-09-16T08:50:16.705Z",
-      "note": "377 条（language 251 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
+      "fetchedAt": "2026-09-17T02:56:47.221Z",
+      "note": "374 条（language 247 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
   },
   "vendors": [
+    {
+      "accentColor": "#e7457a",
+      "continent": "west",
+      "country": "IL",
+      "homepage": "https://ai21.com",
+      "id": "ai21",
+      "motif": "scribe",
+      "name": "AI21 Labs",
+      "nameZh": "AI21"
+    },
     {
       "accentColor": "#d7263d",
       "continent": "west",
@@ -87614,6 +87994,16 @@
       "motif": "shift",
       "name": "Morph",
       "nameZh": "Morph"
+    },
+    {
+      "accentColor": "#7c8da6",
+      "continent": "west",
+      "country": "ZZ",
+      "homepage": null,
+      "id": "motif-technologies",
+      "motif": "wanderer",
+      "name": "Motif Technologies",
+      "nameZh": "Motif Technologies"
     },
     {
       "accentColor": "#e0b341",
