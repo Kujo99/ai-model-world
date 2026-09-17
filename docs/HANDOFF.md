@@ -855,7 +855,11 @@ SWE-bench Verified 的最高分。那张榜只有 25 个模型，Fable 5 / Opus 
 **页脚**
 - 唯一引流位。「作者：程序员鱼皮」链到 B 站主页 `https://space.bilibili.com/12890453`。
   金色主按钮是免费教程 `https://ai.codefather.cn/vibe`（要最显眼），后面两个次级按钮是
-  鱼皮 AI 导航 ai.codefather.cn 与编程导航 codefather.cn。不放源码链接。
+  鱼皮 AI 导航 ai.codefather.cn 与编程导航 codefather.cn。
+- **这一排不放源码链接**（2026-09-16 明确要求过）。但页脚下半段的署名区里有一行
+  「源码开源 liyupi/ai-model-world（MIT）」——那是 09-17 仓库真正开源之后补的，
+  与前一条不冲突：上面那排是引流位，下面那几行回答「这些东西都是哪来的」，
+  代码的出处属于后者。**别把它当成违反偏好删掉。**
 
 **模型详情页的两个站外入口**（`ReviewLinks.tsx`）
 - 「查看评测视频」→ B 站搜索 `{模型名} 测评`（搜索词现算，新模型上线当天链接就通，

@@ -24,6 +24,15 @@ const ART_SOURCES = [
 /** 站长与他的其他站点。放在页脚最上面一行，是全站唯一的引流位。站长名链到 B 站主页。 */
 const AUTHOR = { name: '程序员鱼皮', href: 'https://space.bilibili.com/12890453' };
 
+/**
+ * 开源仓库。
+ *
+ * 放在页脚下半段的署名区，与数据源、美术素材并排，而不是挤进上面那排引流按钮——
+ * 那一排留给站长自己的站点。这里的三行本来就是在回答「这些东西都是哪来的」，
+ * 「代码本身也是公开的」正好是同一个问题的最后一问。
+ */
+const REPO = { name: 'liyupi/ai-model-world', href: 'https://github.com/liyupi/ai-model-world' };
+
 /** 免费教程单独拎出来做主按钮：三个站点并列时它会被淹没，而它是这里最值得点的一个。 */
 const TUTORIAL = {
   name: 'AI 编程入门教程',
@@ -162,6 +171,11 @@ export function SiteFooter() {
           >
             {dict.footer.credits}
           </Link>
+        </div>
+        <div className="mt-1 flex flex-wrap gap-x-1.5 gap-y-1" title={dict.footer.sourceCodeHint}>
+          <span>{dict.footer.sourceCode}</span>
+          <ExtLink href={REPO.href}>{REPO.name}</ExtLink>
+          <span className="opacity-70">（MIT）</span>
         </div>
       </div>
     </footer>

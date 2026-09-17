@@ -157,6 +157,9 @@ export interface Dict {
     author: string;
     /** 引流按钮前的引语 */
     alsoVisit: string;
+    /** 开源仓库入口 */
+    sourceCode: string;
+    sourceCodeHint: string;
   };
 
   /**
@@ -318,6 +321,8 @@ const zh: Dict = {
     credits: '素材署名',
     author: '作者',
     alsoVisit: '也看看',
+    sourceCode: '源码开源',
+    sourceCodeHint: '本站代码、数据管线与抓取脚本全部开源（MIT），在 GitHub 上',
   },
 
   reviews: {
