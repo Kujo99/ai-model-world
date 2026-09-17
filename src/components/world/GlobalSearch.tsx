@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { VendorCrest } from '@/components/character/VendorCrest';
 import { runSearch, type SearchIndex, type SearchResult } from '@/lib/search';
 import { DEFAULT_LANG, getDict } from '@/lib/i18n';
+import { asset } from '@/lib/asset';
 
 /**
  * 全站搜索框。放在导航条里，每一页都在。
@@ -34,7 +35,7 @@ let inflight: Promise<SearchIndex | null> | null = null;
 
 function loadIndex(): Promise<SearchIndex | null> {
   if (cachedIndex) return Promise.resolve(cachedIndex);
-  inflight ??= fetch('/search-index.json')
+  inflight ??= fetch(asset('/search-index.json'))
     .then((r) => (r.ok ? (r.json() as Promise<SearchIndex>) : null))
     .then((i) => {
       cachedIndex = i;

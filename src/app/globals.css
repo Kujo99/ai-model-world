@@ -4,14 +4,12 @@
    中文像素字体。源文件 645 KB，构建期子集化到 ~21 KB。
    见 scripts/fonts/subset.ts。这个字体同时覆盖拉丁字母与数字，
    所以全站只需要这一个字体文件。
+
+   @font-face 不写在这里，而是由 src/app/layout.tsx 内联注入。
+   原因是字体路径要跟着部署前缀走（作为 B 站 Toy 发布时全站挂在 /toy/<slug>/ 下），
+   而 CSS 里既拿不到环境变量，写相对路径又会被打包器当成模块在构建期解析失败。
+   放进布局就能用 src/lib/asset.ts 算出正确地址，与精灵图、搜索索引走同一套规则。
    ───────────────────────────────────────────────────────────── */
-@font-face {
-  font-family: 'Fusion Pixel';
-  src: url('/fonts/pixel-zh.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
 
 @theme {
   /*

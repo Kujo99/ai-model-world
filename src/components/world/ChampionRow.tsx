@@ -5,6 +5,7 @@ import { readableOnDark } from '@/lib/color';
 import { getDict, type Lang } from '@/lib/i18n';
 import { VendorCrest } from '@/components/character/VendorCrest';
 import { SectionFrame } from '@/components/world/SectionFrame';
+import { asset } from '@/lib/asset';
 
 /**
  * 首屏「今日格局」：一排领奖台。
@@ -36,7 +37,7 @@ function Figure({ slug, accent, hasSprite }: { slug: string; accent: string; has
       style={{
         width: FIGURE,
         height: FIGURE,
-        backgroundImage: `url(/sprites/${slug}.png)`,
+        backgroundImage: `url(${asset(`/sprites/${slug}.png`)})`,
         backgroundSize: `${FIGURE * SHEET_COLUMNS}px auto`,
         backgroundPosition: '0 0',
         backgroundRepeat: 'no-repeat',

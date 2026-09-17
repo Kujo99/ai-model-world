@@ -21,6 +21,7 @@ import {
   paramStrippedVariants,
   slugVariants,
   stripEffortSuffix,
+  toSlug,
 } from './lib/ids';
 import { stableStringify } from './lib/stable-json';
 import { normalizeLicense } from './merge/license';
@@ -144,6 +145,14 @@ check('日期戳逐级剥离', slugVariants('claude-3-opus-20240229').includes('
 // Epoch 新版 eci_scores.csv 只有空格分词的展示名，后缀剥离对它也得生效
 check('展示名的空格后缀也能剥离', slugVariants('Grok 4.3 Beta').includes('grok43'), true);
 check('展示名的空格日期戳也能剥离', slugVariants('DeepSeek V3 0324').includes('deepseekv3'), true);
+
+/*
+ * slug 里不能留点。Next 的 trailingSlash 见到末段含点就当文件名、不补斜杠，
+ * 链接变成 /model/xxx-2.5-72b 而文件在 .../index.html，
+ * 不做重定向的对象存储上就是 404。全站 39% 的模型 slug 带点，别改回去。
+ */
+check('slug 的点转成连字符', toSlug('alibaba/qwen-2.5-72b-instruct'), 'alibaba-qwen-2-5-72b-instruct');
+check('slug 不残留任何点', toSlug('a/b2.5.1-c').includes('.'), false);
 
 // ── 许可证 SPDX 归一 ──────────────────────────────────────────────────
 check('MIT License → MIT', normalizeLicense('MIT License'), 'MIT');

@@ -20,6 +20,7 @@ import { anchorsFor } from '@/lib/sprite-manifest';
 import { Bookshelf, Computer } from '@/components/room/Furniture';
 import { getDict, type Lang } from '@/lib/i18n';
 import type { Trait } from '@/lib/traits';
+import { asset } from '@/lib/asset';
 
 /**
  * 村落里的一间屋子，也是整个界面的核心单元。
@@ -251,7 +252,7 @@ export function ModelRoom({
                 <div
                   className="anim-idle anim-walk absolute inset-0"
                   style={{
-                    backgroundImage: `url(/sprites/${visual.slug}.png)`,
+                    backgroundImage: `url(${asset(`/sprites/${visual.slug}.png`)})`,
                     backgroundSize: `calc(${cell} * ${SHEET_COLUMNS}) auto`,
                     backgroundPosition: '0 0',
                     backgroundRepeat: 'no-repeat',

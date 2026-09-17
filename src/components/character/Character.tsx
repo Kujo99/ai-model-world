@@ -6,6 +6,7 @@ import { getDict, type Lang } from '@/lib/i18n';
 import { VendorCrest } from './VendorCrest';
 import { StateOverlays } from './StateOverlays';
 import { anchorsFor } from '@/lib/sprite-manifest';
+import { asset } from '@/lib/asset';
 
 /**
  * 广场上的一个角色。
@@ -156,7 +157,7 @@ export function Character({
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: `url(/sprites/${visual.slug}.png)`,
+                backgroundImage: `url(${asset(`/sprites/${visual.slug}.png`)})`,
                 // 精灵表是 9 列，把整表宽度放大到 9 个格子，每格才正好等于一个显示单元
                 backgroundSize: `calc(${cell} * ${SHEET_COLUMNS}) auto`,
                 backgroundPosition: `0 calc(${cell} * ${-ROW_STAND})`,

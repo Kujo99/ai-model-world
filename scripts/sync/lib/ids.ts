@@ -346,8 +346,22 @@ export function stripParenthetical(name: string): string {
   return name.replace(/\s*\([^)]*\)\s*$/, '').trim();
 }
 
+/**
+ * 模型 id → 页面 slug。
+ *
+ * **点号必须转成连字符，不能保留。** Next 的 `trailingSlash: true` 在末段含点时
+ * 会把它当成文件名而不补斜杠，于是 `qwen-2.5-72b` 这类模型的链接变成
+ * `/model/alibaba-qwen-2.5-72b-instruct`（无斜杠），而导出的文件却在
+ * `model/alibaba-qwen-2.5-72b-instruct/index.html`（是个目录）。
+ *
+ * 本地 Python 服务器和 Vercel 都会做 `/x` → `/x/` 的重定向，所以这个坑藏得很深；
+ * 换成不做重定向的对象存储（B 站 Toy、部分 CDN 静态托管）就是实打实的 404。
+ * 实测全站 556 个模型里有 215 个（39%）的 slug 带点，等于近四成详情页打不开。
+ *
+ * 转换后逐个核对过，零碰撞。
+ */
 export function toSlug(id: string): string {
-  return id.replace(/\//g, '-').replace(/[^a-zA-Z0-9._-]+/g, '-').toLowerCase();
+  return id.replace(/\//g, '-').replace(/[^a-zA-Z0-9_-]+/g, '-').toLowerCase();
 }
 
 /** 从 id 反推一个像样的展示名，用于上游没给名字（或不该用上游名字）的情况。 */

@@ -4,6 +4,7 @@ import { profileFor } from '@/data/vendor-registry';
 import { readableOnDark } from '@/lib/color';
 import { getDict, type Lang } from '@/lib/i18n';
 import { SectionFrame } from '@/components/world/SectionFrame';
+import { asset } from '@/lib/asset';
 
 /**
  * 首页「按类型看」：六张类型卡，一张一类，点开就是总表里这一类的全部模型。
@@ -40,7 +41,7 @@ function Figure({ slug, accent, hasSprite, title }: { slug: string; accent: stri
       style={{
         width: FIGURE,
         height: FIGURE,
-        backgroundImage: `url(/sprites/${slug}.png)`,
+        backgroundImage: `url(${asset(`/sprites/${slug}.png`)})`,
         backgroundSize: `${FIGURE * SHEET_COLUMNS}px auto`,
         backgroundPosition: '0 0',
         backgroundRepeat: 'no-repeat',
