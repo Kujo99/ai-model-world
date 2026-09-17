@@ -1117,7 +1117,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-09-17T03:23:26.279Z",
+  "generatedAt": "2026-09-17T04:06:04.371Z",
   "models": [
     {
       "benchmarks": {
@@ -3586,7 +3586,7 @@
       "benchmarks": {
         "aime": 86.67,
         "arc_agi_2": 1.25,
-        "eci": 138.92,
+        "eci": 139.35,
         "fiction_live": 68.8,
         "gpqa_diamond": 70.71,
         "swe_bench_pro": null,
@@ -3742,7 +3742,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 138.92,
+          "score": 139.35,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -4115,7 +4115,7 @@
       "benchmarks": {
         "aime": 86.67,
         "arc_agi_2": 1.25,
-        "eci": 143.88,
+        "eci": 139.35,
         "fiction_live": 68.8,
         "gpqa_diamond": 80.05,
         "swe_bench_pro": null,
@@ -4266,7 +4266,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 143.88,
+          "score": 139.35,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -4576,7 +4576,7 @@
       "benchmarks": {
         "aime": 62.22,
         "arc_agi_2": null,
-        "eci": 137.42,
+        "eci": 136.19,
         "fiction_live": null,
         "gpqa_diamond": 55.62,
         "swe_bench_pro": null,
@@ -4675,7 +4675,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 137.42,
+          "score": 136.19,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -4721,7 +4721,7 @@
       "benchmarks": {
         "aime": 70.28,
         "arc_agi_2": null,
-        "eci": 139.64,
+        "eci": 136.19,
         "fiction_live": null,
         "gpqa_diamond": 70.08,
         "swe_bench_pro": null,
@@ -4820,7 +4820,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 139.64,
+          "score": 136.19,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -13426,7 +13426,7 @@
       "benchmarks": {
         "aime": 8.47,
         "arc_agi_2": null,
-        "eci": 133.55,
+        "eci": 130,
         "fiction_live": null,
         "gpqa_diamond": 55.3,
         "swe_bench_pro": null,
@@ -13567,7 +13567,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 133.55,
+          "score": 130,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -15190,7 +15190,7 @@
     {
       "benchmarks": {
         "aime": 66.67,
-        "arc_agi_2": 4.03,
+        "arc_agi_2": 1.25,
         "eci": 142.37,
         "fiction_live": null,
         "gpqa_diamond": 71.21,
@@ -15334,7 +15334,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 4.03,
+          "score": 1.25,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -15899,7 +15899,7 @@
     {
       "benchmarks": {
         "aime": 64.44,
-        "arc_agi_2": 8.61,
+        "arc_agi_2": 1.27,
         "eci": 142.68,
         "fiction_live": 37.5,
         "gpqa_diamond": 76.26,
@@ -16039,7 +16039,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 8.61,
+          "score": 1.27,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -20215,7 +20215,7 @@
     {
       "benchmarks": {
         "aime": 71.11,
-        "arc_agi_2": 5.93,
+        "arc_agi_2": 1.27,
         "eci": 141.69,
         "fiction_live": 36.4,
         "gpqa_diamond": 78.28,
@@ -20354,7 +20354,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 5.93,
+          "score": 1.27,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -20996,7 +20996,7 @@
     {
       "benchmarks": {
         "aime": 77.78,
-        "arc_agi_2": 13.61,
+        "arc_agi_2": 3.75,
         "eci": 146.84,
         "fiction_live": null,
         "gpqa_diamond": 82.32,
@@ -21165,7 +21165,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 13.61,
+          "score": 3.75,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -27160,7 +27160,7 @@
       "benchmarks": {
         "aime": 53.33,
         "arc_agi_2": 1.3,
-        "eci": 141.29,
+        "eci": 138.97,
         "fiction_live": 33.3,
         "gpqa_diamond": 69.22,
         "swe_bench_pro": null,
@@ -27340,7 +27340,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 141.29,
+          "score": 138.97,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -27418,7 +27418,7 @@
       "benchmarks": {
         "aime": 66.39,
         "arc_agi_2": 1.12,
-        "eci": 141.29,
+        "eci": 138.97,
         "fiction_live": 33.3,
         "gpqa_diamond": 76.33,
         "swe_bench_pro": null,
@@ -27603,7 +27603,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 141.29,
+          "score": 138.97,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -28053,7 +28053,7 @@
       "benchmarks": {
         "aime": 15.83,
         "arc_agi_2": 4.03,
-        "eci": 135.95,
+        "eci": 132.35,
         "fiction_live": 53.1,
         "gpqa_diamond": 56.53,
         "swe_bench_pro": null,
@@ -28249,7 +28249,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 135.95,
+          "score": 132.35,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -28407,7 +28407,7 @@
       "benchmarks": {
         "aime": 37.78,
         "arc_agi_2": 4.03,
-        "eci": 135.95,
+        "eci": 132.35,
         "fiction_live": 53.1,
         "gpqa_diamond": 67.61,
         "swe_bench_pro": null,
@@ -28611,7 +28611,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 135.95,
+          "score": 132.35,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -32598,7 +32598,7 @@
       "benchmarks": {
         "aime": 57.78,
         "arc_agi_2": 1.3,
-        "eci": 134.71,
+        "eci": 135.37,
         "fiction_live": 37.5,
         "gpqa_diamond": 57.07,
         "swe_bench_pro": null,
@@ -32727,7 +32727,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 134.71,
+          "score": 135.37,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -32965,7 +32965,7 @@
     {
       "benchmarks": {
         "aime": 73.06,
-        "arc_agi_2": 1.69,
+        "arc_agi_2": 2.54,
         "eci": 142.99,
         "fiction_live": 68.8,
         "gpqa_diamond": null,
@@ -33126,7 +33126,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 1.69,
+          "score": 2.54,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -54864,7 +54864,7 @@
       "benchmarks": {
         "aime": null,
         "arc_agi_2": null,
-        "eci": 140.11,
+        "eci": 145.76,
         "fiction_live": 40.6,
         "gpqa_diamond": null,
         "swe_bench_pro": null,
@@ -55012,7 +55012,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 140.11,
+          "score": 145.76,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -55114,7 +55114,7 @@
       "benchmarks": {
         "aime": null,
         "arc_agi_2": null,
-        "eci": 140.11,
+        "eci": 145.76,
         "fiction_live": 40.6,
         "gpqa_diamond": null,
         "swe_bench_pro": null,
@@ -55246,7 +55246,7 @@
         {
           "attribution": "third-party",
           "league": "eci",
-          "score": 140.11,
+          "score": 145.76,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "index"
@@ -67391,7 +67391,7 @@
     {
       "benchmarks": {
         "aime": 96.11,
-        "arc_agi_2": 52.91,
+        "arc_agi_2": 0.83,
         "eci": 153.51,
         "fiction_live": null,
         "gpqa_diamond": 91.4,
@@ -67584,7 +67584,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 52.91,
+          "score": 0.83,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -67845,7 +67845,7 @@
     {
       "benchmarks": {
         "aime": 96.11,
-        "arc_agi_2": 52.91,
+        "arc_agi_2": 0.83,
         "eci": 153.51,
         "fiction_live": null,
         "gpqa_diamond": 91.4,
@@ -68009,7 +68009,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 52.91,
+          "score": 0.83,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -68246,7 +68246,7 @@
     {
       "benchmarks": {
         "aime": 96.11,
-        "arc_agi_2": 52.91,
+        "arc_agi_2": 0.83,
         "eci": 153.51,
         "fiction_live": null,
         "gpqa_diamond": 91.4,
@@ -68414,7 +68414,7 @@
         {
           "attribution": "third-party",
           "league": "arc_agi_2",
-          "score": 52.91,
+          "score": 0.83,
           "source": "epoch.ai",
           "sourceUrl": "https://epoch.ai/benchmarks",
           "unit": "pct"
@@ -87689,37 +87689,37 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "ZIP 87 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 76 个；训练算力 309 行；去重后 407 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "请求 155 个开源模型，成功 151，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "4110 条（对话类 3343 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "models.json 403 条；api.json 220 provider / 7842 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "444 条；已剔除 artificial_analysis 187 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
@@ -87729,7 +87729,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-09-17T03:23:26.279Z",
+      "fetchedAt": "2026-09-17T04:06:04.371Z",
       "note": "374 条（language 247 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
