@@ -40,6 +40,8 @@
 
 # QA 截图是随手产出的验证材料，不是文档插图（文档引用的是 samples/ 根目录下那几张）。
 # 15 MB 起步，而且改一次 UI 就全部过期，留在库里只会误导下一个人。
+# 注意别把 docs/screenshots/ 一起排除掉：那是 README 的配图，由
+# scripts/qa/readme-shots.ts 统一压到 1440 宽（六张共约 650 KB），需要跟着仓库走。
 /docs/samples/shots/
 # 精灵图总览表由每次 npm run sprites 重新生成，0.5 MB，同样是再生产物
 /docs/samples/sprite-contact-sheet.png
