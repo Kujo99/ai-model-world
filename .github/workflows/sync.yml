@@ -30,9 +30,9 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
@@ -41,7 +41,7 @@ jobs:
 
       # 条件请求缓存。命中 ETag 时上游返回 304，零流量。
       - name: 恢复 HTTP 缓存
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: data/.cache
           key: sync-http-cache-${{ github.run_id }}
@@ -79,7 +79,7 @@ jobs:
       # 闸门拦截时留下证据，方便回溯是哪一次上游出了问题
       - name: 上传同步报告
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: sync-report
           path: |
