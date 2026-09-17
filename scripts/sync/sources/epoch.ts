@@ -819,22 +819,31 @@ export async function fetchEpoch(fetchedAt: string): Promise<EpochResult> {
       register(version, true);
       register(name, true);
       /*
-       * 去掉括号后的名字**只能进宽松键**。
+       * 括号是上游区分「同名升级版」的手段，处理它要同时照顾两边。
        *
-       * 上游用括号区分同名的升级版：`DeepSeek-R1 (May 2025)` 是 R1-0528，
-       * 而 `DeepSeek-R1` 是初版，两行各有各的分（141.29 / 138.97）。
-       * 一旦让去括号的形式也占住严格键，它就会跟真正那行「纯名」撞车，
-       * 后写的覆盖先写的——实测 DeepSeek-R1 拿到了 R1-0528 的分、
-       * DeepSeek-V3 拿到了 V3-0324 的分，两个老型号的排名凭空虚高。
+       * 上游同时有 `DeepSeek-R1 (May 2025)`（141.29，其实是 R1-0528）
+       * 和 `DeepSeek-R1`（138.97，初版），两行各有各的分。
        *
-       * 全量扫描上游 43 条带括号的行，只有 3 条存在同名纯名行（另一条是
-       * Claude 3.5 Sonnet），其余 40 条没有纯名版本，仍然要靠这次剥离才能匹配上——
-       * 所以不能删掉它，只能降级到宽松层。查找是「从严到宽逐档、只补缺失不覆盖」，
-       * 降级后它依然能兜住那 40 条，却不会再抢真身的位置。
+       * 原来的写法把去括号的名字也注册进**严格键**，括号行因此撞掉了纯名行，
+       * 后写覆盖先写——初版拿到了升级版的分。但只是把它降级到宽松层还不够：
+       * 那样轮到 `deepseek-r1-0528` 去查时，它的严格键 `deepseekr10528` 谁都没占，
+       * 退到宽松层就跟初版抢同一个 `deepseekr1`，错误只是从一边挪到了另一边。
        *
-       * 编程成绩那条路径（registerLeagueScore）本来就是这么写的，这里是对齐它。
+       * 所以分两步：去括号的名字降级到宽松层（那 40 条没有纯名版本的行仍然靠它兜住），
+       * 同时用 `date` 列补一个 `名字 + MMDD` 的严格键——上游给的是精确日期
+       * （"(May 2025)" 对应 2025-05-28），正好拼出我们那边 `deepseek-r1-0528` 的形状，
+       * 让升级版精确命中自己那一行。两边各归各位。
+       *
+       * 编程成绩那条路径（registerLeagueScore）本来就把去括号名只放宽松层，这里是对齐它。
        */
-      if (name) register(stripParenthetical(name), false);
+      if (name) {
+        const bare = stripParenthetical(name);
+        register(bare, false);
+        if (bare && bare !== name && releaseDate?.precision === 'day') {
+          const mmdd = releaseDate.iso.slice(5).replace('-', '');
+          if (/^\d{4}$/.test(mmdd)) register(`${bare}-${mmdd}`, true);
+        }
+      }
 
       for (const k of strictKeys) {
         mergeInto(strict, k, score === null ? null : spec.key, score, releaseDate, org || null, iso);
