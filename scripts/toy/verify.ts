@@ -23,9 +23,18 @@ import { chromium, type Frame, type Page } from 'playwright';
 
 const ROOT = join(import.meta.dirname, '..', '..');
 const PKG = join(ROOT, '.toy-pkg');
+/**
+ * 挂载路径要跟线上同构，**包括那个版本号目录**。
+ *
+ * 线上真实地址是 `/toy/<slug>/<toyId>-v<版本号>/index.html`（在 bilibili.com 的页面里
+ * 用 iframe 套着），版本号每次更新都变。拿 `/toy/<slug>/` 验等于放过了「前缀写死」
+ * 这一整类问题，正是它让 2026-09-17 那版整站失去交互。这里用一个假的版本号目录，
+ * 只要包对挂载路径没有任何假设，它就能过。
+ */
 const SLUG = (process.env.NEXT_BASE_PATH ?? '/toy/ai-model-world').replace(/^\/+|\/+$/g, '');
+const MOUNT = `${SLUG}/34090174887936-v15484`;
 const PORT = 4561;
-const BASE = `http://127.0.0.1:${PORT}/${SLUG}`;
+const BASE = `http://127.0.0.1:${PORT}/${MOUNT}`;
 
 const MIME: Record<string, string> = {
   '.html': 'text/html; charset=utf-8',
@@ -48,11 +57,11 @@ function serve() {
   return createServer((req, res) => {
     const url = new URL(req.url ?? '/', 'http://x');
     const path = decodeURIComponent(url.pathname);
-    if (!path.startsWith(`/${SLUG}/`)) {
+    if (!path.startsWith(`/${MOUNT}/`)) {
       res.writeHead(404).end('outside mount');
       return;
     }
-    const file = join(PKG, normalize(path.slice(SLUG.length + 2)));
+    const file = join(PKG, normalize(path.slice(MOUNT.length + 2)));
     if (!file.startsWith(PKG) || !existsSync(file) || !statSync(file).isFile()) {
       res.writeHead(404).end('not found');
       return;
@@ -205,12 +214,13 @@ async function main() {
   // ---------------------------------------------------------------- 站内跳转
   console.log('\n— 站内跳转 —');
   const nav = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  // href 剥过前缀，是不带开头斜杠的相对路径，所以这里不能按 `/model/` 匹配
   const hops: Array<[string, string]> = [
-    ['/index.html', 'a[href*="/model/"]'],
-    ['/leaderboard/index.html', 'a[href*="/model/"]'],
-    ['/chronicle/index.html', 'a[href*="/model/"]'],
-    ['/model/deepseek-deepseek-v4-1-flash/index.html', 'a[href*="/vendor/"]'],
-    ['/index.html', 'a[href*="/leaderboard/"]'],
+    ['/index.html', 'a[href*="model/"]'],
+    ['/leaderboard/index.html', 'a[href*="model/"]'],
+    ['/chronicle/index.html', 'a[href*="model/"]'],
+    ['/model/deepseek-deepseek-v4-1-flash/index.html', 'a[href*="vendor/"]'],
+    ['/index.html', 'a[href*="leaderboard/"]'],
   ];
   for (const [from, sel] of hops) {
     await nav.goto(BASE + from, { waitUntil: 'networkidle' });
@@ -220,7 +230,7 @@ async function main() {
     await link.click().catch(() => {});
     await nav.waitForTimeout(1800);
     const ok = await nav.evaluate(() => document.body.innerText.length > 400 && !document.body.innerText.includes('not found'));
-    check(ok, `${from} → ${href?.replace(`/${SLUG}`, '') ?? '?'}`, ok ? '' : `落在 ${nav.url()}`);
+    check(ok, `${from} → ${href?.replace(`/${MOUNT}`, "") ?? "?"}`, ok ? '' : `落在 ${nav.url()}`);
   }
   await nav.close();
 
