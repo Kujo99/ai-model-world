@@ -112,4 +112,6 @@ npx tsx scripts/qa/verify-text.ts "某段文字" # 区分「没改干净」和�
 
 ## 许可
 
-代码 MIT。美术素材与字体各自遵循其上游许可，见上表。
+代码与文档 [MIT](LICENSE)。像素素材（CC0 / OGA-BY 3.0）、中文字体（OFL-1.1）与
+数据快照（CC-BY 4.0 等）各自遵循上游许可，逐项的适用范围、署名义务与排除的数据源
+见 [NOTICE.md](NOTICE.md)。
