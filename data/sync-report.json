@@ -231,8 +231,8 @@
       "total": 581
     },
     "license": {
-      "filled": 121,
-      "pct": 20.8,
+      "filled": 122,
+      "pct": 21,
       "total": 581
     },
     "maxOutput": {
@@ -266,18 +266,18 @@
       "total": 581
     },
     "params.confidence!=unknown": {
-      "filled": 536,
-      "pct": 92.3,
+      "filled": 537,
+      "pct": 92.4,
       "total": 581
     },
     "params.sizeTier": {
-      "filled": 313,
-      "pct": 53.9,
+      "filled": 312,
+      "pct": 53.7,
       "total": 581
     },
     "params.totalB": {
-      "filled": 223,
-      "pct": 38.4,
+      "filled": 225,
+      "pct": 38.7,
       "total": 581
     },
     "pricing.cachedInputPerMTok": {
@@ -1877,7 +1877,7 @@
     },
     "liveModels": 570
   },
-  "generatedAt": "2026-09-18T06:34:09.227Z",
+  "generatedAt": "2026-09-18T17:10:34.893Z",
   "livebench": {
     "_note": "LiveBench 官方榜（Apache-2.0，本轮调研里许可证最干净的一份）。release 清单优先从上游仓库的 LIVE_BENCH_RELEASES 常量解析，解析失败才用内置兜底清单——写死清单意味着新 release 不会被自动发现，与「发布后无人维护」的承诺相悖。releasesSkipped 里是题目集换代之前的 release，跨那个断点分数不可比（中位差 27.6 分）。",
     "matchedModels": 120,
@@ -1949,13 +1949,7 @@
       "zhipuai/glm-5.3-flashx"
     ]
   },
-  "releaseDateConflicts": [
-    {
-      "from": "2025-12-01",
-      "id": "mistral/mistral-large-2512",
-      "to": "2025-12-02"
-    }
-  ],
+  "releaseDateConflicts": [],
   "sources": {
     "derived": {
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
@@ -1966,7 +1960,7 @@
       "ok": true
     },
     "huggingface": {
-      "note": "请求 155 个开源模型，成功 151，失败 4",
+      "note": "请求 157 个开源模型，成功 153，失败 4",
       "ok": true
     },
     "litellm": {
@@ -1978,7 +1972,7 @@
       "ok": true
     },
     "models.dev": {
-      "note": "models.json 408 条；api.json 221 provider / 7842 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
+      "note": "models.json 408 条；api.json 222 provider / 7852 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
@@ -2095,7 +2089,5 @@
     "withFlop": 83
   },
   "vendorRegistrySource": "src/data/vendor-registry.ts",
-  "warnings": [
-    "1 个已存在模型的发布日期发生变化，已记入 data/sync-report.json 待审"
-  ]
+  "warnings": []
 }

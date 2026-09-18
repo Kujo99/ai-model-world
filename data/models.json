@@ -1117,7 +1117,7 @@
       "unit": "pct"
     }
   ],
-  "generatedAt": "2026-09-18T06:34:09.227Z",
+  "generatedAt": "2026-09-18T17:10:34.893Z",
   "models": [
     {
       "benchmarks": {
@@ -31822,7 +31822,7 @@
       "firstSeenAt": "2026-08-31T10:07:26.393Z",
       "id": "deepseek/deepseek-v4-flash-vision-exp",
       "knowledgeCutoff": null,
-      "license": null,
+      "license": "MIT",
       "maxOutput": 384000,
       "modalities": {
         "input": [
@@ -31834,13 +31834,11 @@
         ]
       },
       "name": "DeepSeek V4 Flash Vision Exp",
-      "openWeights": false,
+      "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "estimated",
-        "sizeTier": 1,
-        "sizeTierBasis": "price+naming",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 296.35
       },
       "pricing": {
         "cachedInputPerMTok": 0.003,
@@ -31854,11 +31852,12 @@
         "capabilities.toolCall": "models.dev",
         "coding": "derived",
         "contextWindow": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
-        "params.sizeTier": "derived",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -32884,13 +32883,13 @@
       "openWeights": true,
       "params": {
         "activeB": null,
-        "confidence": "unknown",
-        "totalB": null
+        "confidence": "exact",
+        "totalB": 557.17
       },
       "pricing": {
         "cachedInputPerMTok": 0.006,
-        "inputPerMTok": 0.24,
-        "outputPerMTok": 1.08
+        "inputPerMTok": 0.255552,
+        "outputPerMTok": 1.1592
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -32899,11 +32898,12 @@
         "capabilities.toolCall": "models.dev",
         "contextWindow": "models.dev",
         "knowledgeCutoff": "models.dev",
-        "license": "models.dev",
+        "license": "huggingface",
         "maxOutput": "models.dev",
         "modalities": "models.dev",
         "name": "models.dev",
         "openWeights": "models.dev",
+        "params.totalB": "huggingface",
         "pricing.cachedInputPerMTok": "models.dev",
         "pricing.inputPerMTok": "models.dev",
         "pricing.outputPerMTok": "models.dev",
@@ -50748,8 +50748,8 @@
       },
       "pricing": {
         "cachedInputPerMTok": null,
-        "inputPerMTok": 0.34443,
-        "outputPerMTok": 0.45924
+        "inputPerMTok": 0.3438,
+        "outputPerMTok": 0.4584
       },
       "provenance": {
         "capabilities.promptCaching": "derived",
@@ -89469,37 +89469,37 @@
   ],
   "sources": {
     "derived": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "管线内推导的字段（规模档位、缓存能力、退役判定）",
       "ok": true
     },
     "epoch.ai": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "ZIP 87 个条目；取到 7/7 个指标；编程赛制 9 个；全榜单 76 个；训练算力 309 行；去重后 408 个模型实体；合规拦截 1 个文件",
       "ok": true
     },
     "huggingface": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
-      "note": "请求 155 个开源模型，成功 151，失败 4",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
+      "note": "请求 157 个开源模型，成功 153，失败 4",
       "ok": true
     },
     "litellm": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "4306 条（对话类 3536 条）；用作新模型的第三方佐证，以及 models.dev 缺项时的定价/上下文兜底",
       "ok": true
     },
     "livebench": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "Apache-2.0 / DATASHEET 明文「no copyrights on the data」。采用 6 个同期 release（2026-06-25, 2026-01-08, 2025-12-23, 2025-11-25, 2025-05-30, 2025-04-25）；跳过题目集换代前的 5 个（2024-06-24, 2024-07-26, 2024-08-31, 2024-11-25, 2025-04-02）——实测跨这个断点同一模型的 Coding 分中位差 27.6 分，不可同池。",
       "ok": true
     },
     "models.dev": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
-      "note": "models.json 408 条；api.json 221 provider / 7842 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
+      "note": "models.json 408 条；api.json 222 provider / 7852 条；benchmarks[] 674 条，已拦截 AA 血缘 156 条，非编程口径跳过 257 条",
       "ok": true
     },
     "openrouter": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "445 条；已剔除 artificial_analysis 188 处（AA ToS 合规）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     },
@@ -89509,7 +89509,7 @@
       "ok": true
     },
     "vercel-gateway": {
-      "fetchedAt": "2026-09-18T06:34:09.227Z",
+      "fetchedAt": "2026-09-18T17:10:34.893Z",
       "note": "376 条（language 249 条）；用于新模型发现、发布日期投票，以及 models.dev 缺项时的定价/上下文/模态兜底",
       "ok": true
     }
