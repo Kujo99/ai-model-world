@@ -50,6 +50,17 @@ import type { ScoreUnit } from '../../../src/lib/types';
 const PAGE = 100;
 
 /**
+ * 翻页之间的间隔。
+ *
+ * 首次实测：八个分榜连着翻二十多页，后三个（text / search / document）全部吃到
+ * HTTP 429。datasets-server 对匿名请求有速率限制，而文本竞技场有六百多行、单独就要七页。
+ * 加这个间隔之后整轮多花十几秒，同步本来就不是实时任务，换取的是分榜不再随机掉。
+ */
+const PAGE_DELAY_MS = 700;
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/**
  * 成绩的署名地址指向**数据集**，不是 arena.ai 的榜单页。
  *
  * 两个理由，任一条都足够。其一，CC-BY 要求给出「材料」的链接，而我们消费的是这份
@@ -255,6 +266,7 @@ async function fetchArena(config: string, league: string): Promise<ArenaScore[]>
   let total = Infinity;
 
   while (offset < total) {
+    if (offset > 0) await sleep(PAGE_DELAY_MS);
     const url = ENDPOINTS.lmarenaRows(config, offset, PAGE);
     const { data } = await fetchJson<RowsResponse>(url, { label: `lmarena/${config}@${offset}` });
     total = data.num_rows_total ?? 0;
@@ -296,6 +308,7 @@ export async function fetchLmArena(): Promise<ArenaResult> {
   const failed: string[] = [];
 
   for (const { config, league } of ARENAS) {
+    if (scores.length > 0) await sleep(PAGE_DELAY_MS);
     try {
       const rows = await fetchArena(config, league);
       scores.push(...rows);
