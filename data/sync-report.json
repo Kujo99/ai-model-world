@@ -311,8 +311,8 @@
       "total": 588
     },
     "scores.任一成绩": {
-      "filled": 334,
-      "pct": 56.8,
+      "filled": 336,
+      "pct": 57.1,
       "total": 588
     },
     "trainingComputeFlop": {
@@ -1514,8 +1514,10 @@
       }
     },
     "nonEpochLeagues": {
+      "arena_document": 42,
       "arena_image_edit": 12,
       "arena_image_to_video": 4,
+      "arena_search": 7,
       "arena_text_to_image": 12,
       "arena_text_to_video": 4,
       "arena_video_edit": 1,
@@ -1882,7 +1884,7 @@
     },
     "liveModels": 577
   },
-  "generatedAt": "2026-09-20T03:55:27.843Z",
+  "generatedAt": "2026-09-20T04:04:55.068Z",
   "livebench": {
     "_note": "LiveBench 官方榜（Apache-2.0，本轮调研里许可证最干净的一份）。release 清单优先从上游仓库的 LIVE_BENCH_RELEASES 常量解析，解析失败才用内置兜底清单——写死清单意味着新 release 不会被自动发现，与「发布后无人维护」的承诺相悖。releasesSkipped 里是题目集换代之前的 release，跨那个断点分数不可比（中位差 27.6 分）。",
     "matchedModels": 120,
@@ -1976,7 +1978,7 @@
       "ok": true
     },
     "lmarena": {
-      "note": "5/8 个分榜，共 239 条 Arena 分；失败 text search document",
+      "note": "7/7 个分榜，共 317 条 Arena 分",
       "ok": true
     },
     "models.dev": {
