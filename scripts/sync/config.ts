@@ -38,6 +38,14 @@ export const ENDPOINTS = {
   /** release 清单的权威出处是仓库里的 LIVE_BENCH_RELEASES 常量，抓不到时回落到内置清单。 */
   liveBenchReleasesSource:
     'https://raw.githubusercontent.com/LiveBench/LiveBench/main/livebench/common.py',
+  /**
+   * LMArena 官方榜单数据集（CC-BY 4.0）。走 Hugging Face 的 datasets-server，
+   * 它直接返回 JSON，省掉引入 parquet 解析依赖。读的是权利人自己的发布，
+   * 不是抓 arena.ai 的站，区别见 sources/lmarena.ts 顶部。
+   */
+  lmarenaRows: (config: string, offset: number, length: number) =>
+    'https://datasets-server.huggingface.co/rows?dataset=lmarena-ai%2Fleaderboard-dataset' +
+    `&config=${encodeURIComponent(config)}&split=latest&offset=${offset}&length=${length}`,
 } as const;
 
 /**

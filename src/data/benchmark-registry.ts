@@ -423,6 +423,72 @@ const GENERAL: Record<string, Entry> = {
     homepage: null,
   },
 
+  /*
+   * ── 生成类竞技场（LMArena，CC-BY 4.0）──
+   *
+   * 这几条补的是别处补不上的一块：图像与视频**生成**模型此前在站内一个分数都没有，
+   * 因为它们清一色是闭源商业模型，学术基准要么只测开源、要么停在 2023 年那一代。
+   *
+   * 量纲是人类盲投的 Bradley-Terry 分，与学术评测的通过率不可比，所以各自单独成榜，
+   * 不进综合智力。优先级排在多模态类目靠前，因为对这两类模型来说它是**唯一**的成绩。
+   */
+  arena_text_to_image: {
+    label: '文生图竞技场',
+    blurb: '同一句提示词让两个模型各画一张，真人盲选哪张更好，几百万次投票攒出的分。图像模型目前唯一的公开横评。',
+    category: '多模态',
+    priority: 1,
+    homepage: 'https://arena.ai/leaderboard/text-to-image',
+  },
+  arena_text_to_video: {
+    label: '文生视频竞技场',
+    blurb: '同一句提示词生成两段视频，真人盲选。Veo、Sora、可灵这些闭源模型能放在一起比，靠的就是这种投票。',
+    category: '多模态',
+    priority: 2,
+    homepage: 'https://arena.ai/leaderboard/text-to-video',
+  },
+  arena_image_edit: {
+    label: '图像编辑竞技场',
+    blurb: '给一张图加一句修改要求，看谁改得更合心意。考的是听懂指令并且只改该改的地方。',
+    category: '多模态',
+    priority: 3,
+    homepage: 'https://arena.ai/leaderboard/image-edit',
+  },
+  arena_image_to_video: {
+    label: '图生视频竞技场',
+    blurb: '拿一张静态图让它动起来，真人盲选哪段更自然。',
+    category: '多模态',
+    priority: 4,
+    homepage: 'https://arena.ai/leaderboard/image-to-video',
+  },
+  arena_video_edit: {
+    label: '视频编辑竞技场',
+    blurb: '给一段视频加一句修改要求，看谁改得更好。',
+    category: '多模态',
+    priority: 5,
+    homepage: 'https://arena.ai/leaderboard/video-edit',
+  },
+  arena_text: {
+    label: '文本竞技场',
+    blurb: '真人盲投出来的对话偏好分。它衡量的是「人更爱看谁的回答」，跟学术评测测的「答得对不对」不是一回事，所以单独成榜。',
+    category: '综合',
+    priority: 30,
+    homepage: 'https://arena.ai/leaderboard/text',
+  },
+  arena_search: {
+    label: '联网搜索竞技场',
+    blurb: '带联网能力的模型回答时效性问题，真人盲选谁查得准、答得实在。',
+    category: '智能体',
+    priority: 40,
+    homepage: 'https://arena.ai/leaderboard/search',
+  },
+  arena_document: {
+    label: '文档理解竞技场',
+    blurb: '丢一份文档进去提问，真人盲选谁读得更明白。',
+    category: '长文本',
+    priority: 40,
+    homepage: 'https://arena.ai/leaderboard/document',
+  },
+
   // ── 多模态 ──
   video_mme: {
     label: '视频理解',

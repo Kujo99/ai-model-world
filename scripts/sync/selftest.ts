@@ -6,6 +6,7 @@
  * 覆盖调研报告里点名的每一个坑：单位归一化、YYYY-MM 日期、发布日期的两个实测反例、
  * Artificial Analysis 字段剔除、闭源模型不得标 exact、以及合理性校验闸门本身。
  */
+import { arenaMatchCandidates, arenaNameKeys } from './sources/lmarena';
 import {
   classifyEpochFile,
   findArtificialAnalysisLeaks,
@@ -153,6 +154,45 @@ check('展示名的空格日期戳也能剥离', slugVariants('DeepSeek V3 0324'
  */
 check('slug 的点转成连字符', toSlug('alibaba/qwen-2.5-72b-instruct'), 'alibaba-qwen-2-5-72b-instruct');
 check('slug 不残留任何点', toSlug('a/b2.5.1-c').includes('.'), false);
+
+/*
+ * ── 竞技场名称匹配 ───────────────────────────────────────────────────
+ *
+ * 这几条锁的是 2026-09-20 接入 LMArena 时踩的两个点。
+ *
+ * 一是上游与站内各挂各的配置后缀，不剥就对不上：上游 `veo-3.1-audio`、
+ * `gpt-image-1.5-high-fidelity`，站内 `veo-3.1-generate-preview`。
+ * 实测不剥的话图像视频模型只能匹配三分之一。
+ *
+ * 二是**剥过头比不剥更糟**。`fast` / `lite` / `pro` 是同族不同型号的区分位，
+ * 一旦被当成配置词剥掉，`veo-3.1-fast` 会跟 `veo-3.1` 撞成一个，两个型号的分数就串了。
+ * 下面第三、四条就是拦这个的。
+ */
+check(
+  '竞技场名剥掉配置后缀',
+  arenaNameKeys('veo-3.1-audio').includes('veo31'),
+  true,
+);
+check(
+  '括号里的通行名也要注册',
+  arenaNameKeys('gemini-3-pro-image-2k (nano-banana-pro)').includes('nanobananapro'),
+  true,
+);
+check(
+  'fast 是型号区分位，不能被剥掉',
+  arenaNameKeys('veo-3.1-fast-audio').includes('veo31'),
+  false,
+);
+check(
+  'lite 同理',
+  arenaNameKeys('gemini-3.1-flash-lite-image (nano-banana-2-lite)').includes('nanobanana2'),
+  false,
+);
+check(
+  '站内名的 preview / generate 后缀也要剥',
+  arenaMatchCandidates(['veo-3.1-generate-preview']).includes('veo31'),
+  true,
+);
 
 // ── 许可证 SPDX 归一 ──────────────────────────────────────────────────
 check('MIT License → MIT', normalizeLicense('MIT License'), 'MIT');
@@ -789,6 +829,7 @@ function snapshot(models: ModelRecord[]): WorldSnapshot {
       'vercel-gateway': { ok: true, fetchedAt: null },
       litellm: { ok: true, fetchedAt: null },
       livebench: { ok: true, fetchedAt: null },
+      lmarena: { ok: true, fetchedAt: null },
       derived: { ok: true, fetchedAt: null },
       override: { ok: true, fetchedAt: null },
     },

@@ -32,6 +32,7 @@ import { loadVendorRegistry } from './merge/vendor-registry';
 import { fetchEpoch } from './sources/epoch';
 import { fetchLiteLlm } from './sources/litellm';
 import { fetchLiveBench } from './sources/livebench';
+import { fetchLmArena } from './sources/lmarena';
 import { fetchModelsDev } from './sources/models-dev';
 import { fetchOpenRouter } from './sources/openrouter';
 import { fetchVercelGateway } from './sources/vercel-gateway';
@@ -61,12 +62,13 @@ async function main(): Promise<number> {
 
   // ── 抓取 ───────────────────────────────────────────────────────────
   const modelsDev = await fetchModelsDev(runIso);
-  const [epoch, openrouter, vercel, litellm, livebench] = await Promise.all([
+  const [epoch, openrouter, vercel, litellm, livebench, lmarena] = await Promise.all([
     fetchEpoch(runIso),
     fetchOpenRouter(runIso),
     fetchVercelGateway(runIso),
     fetchLiteLlm(runIso),
     fetchLiveBench(runIso),
+    fetchLmArena(),
   ]);
 
   const targets = hfTargets(modelsDev);
@@ -185,6 +187,7 @@ async function main(): Promise<number> {
     litellm,
     huggingface,
     livebench,
+    lmarena,
     registry,
     previous,
   });
@@ -197,6 +200,7 @@ async function main(): Promise<number> {
     'vercel-gateway': vercel.status,
     litellm: litellm.status,
     livebench: livebench.status,
+    lmarena: { ok: lmarena.ok, fetchedAt: runIso, note: lmarena.note },
     derived: { ok: true, fetchedAt: runIso, note: '管线内推导的字段（规模档位、缓存能力、退役判定）' },
     override: { ok: true, fetchedAt: null, note: '暂无人工覆盖层' },
   };

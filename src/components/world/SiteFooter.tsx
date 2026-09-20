@@ -6,6 +6,16 @@ const DATA_SOURCES = [
   { name: 'Epoch AI', license: 'CC-BY 4.0', href: 'https://epoch.ai/data/ai-benchmarking-dashboard' },
   { name: 'models.dev', license: 'MIT', href: 'https://models.dev' },
   { name: 'LiveBench', license: 'Apache-2.0', href: 'https://livebench.ai' },
+  /*
+   * 竞技场分来自 LMArena 官方发布的 `lmarena-ai/leaderboard-dataset`（CC-BY 4.0）。
+   * 链接指向数据集本身而不是 arena.ai 的榜单页：CC-BY 要求给出**材料**的链接，
+   * 而我们用的是那份数据集，不是那个网页。修改声明在致谢页。
+   */
+  {
+    name: 'LMArena',
+    license: 'CC-BY 4.0',
+    href: 'https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset',
+  },
 ];
 
 const ART_SOURCES = [

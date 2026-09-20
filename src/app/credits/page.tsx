@@ -92,6 +92,32 @@ export default function CreditsPage() {
               </li>
               <li>模型元数据（发布日期、定价、上下文）：models.dev，MIT；缺项时由 LiteLLM、OpenRouter、Vercel AI Gateway 公开目录补齐事实字段。</li>
               <li>编程分项：LiveBench，Apache-2.0。</li>
+              {/*
+                CC-BY 4.0 要求四件事：署创作者、给许可名与链接、给材料链接、声明改动。
+                前三项在这一句里，第四项是后半句——少了它就是违约。
+              */}
+              <li>
+                竞技场成绩（文生图、文生视频、图像与视频编辑、文本、搜索、文档）：
+                <a
+                  href="https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-dotted hover:text-[var(--color-gold)]"
+                >
+                  LMArena 官方榜单数据集
+                </a>
+                ，
+                <a
+                  href="https://creativecommons.org/licenses/by/4.0/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-dotted hover:text-[var(--color-gold)]"
+                >
+                  CC-BY 4.0
+                </a>
+                。本站做过两处改动：把上游的模型名匹配到站内的模型条目，以及按本站的赛制分列重新排序；
+                分数本身原样引用，未做换算。这些分数是真人盲投的偏好分，与学术评测不可比，因此单独成榜。
+              </li>
               <li>中文像素字体：Fusion Pixel Font（缝合像素字体），OFL-1.1。</li>
             </ul>
           </section>

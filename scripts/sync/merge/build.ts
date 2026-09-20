@@ -8,6 +8,12 @@ import {
 } from '../lib/ids';
 import { log } from '../lib/log';
 import {
+  arenaMatchCandidates,
+  indexArenaScores,
+  lookupArenaScores,
+  type ArenaResult,
+} from '../sources/lmarena';
+import {
   epochBenchKeys,
   lookupEpoch,
   lookupEpochCoding,
@@ -71,6 +77,7 @@ export interface BuildInput {
   litellm: LiteLlmResult;
   huggingface: HuggingFaceResult;
   livebench: LiveBenchResult;
+  lmarena: ArenaResult;
   registry: LoadedRegistry;
   previous: WorldSnapshot | null;
 }
@@ -238,6 +245,7 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
     litellm,
     huggingface,
     livebench,
+    lmarena,
     registry,
     previous,
   } = input;
@@ -409,6 +417,10 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
     // 先到先得；上游遍历顺序由 Map 插入顺序决定，而那是 release 降序，即优先最新。
     if (!liveBenchByModelId.has(id)) liveBenchByModelId.set(id, scores);
   }
+
+  /** 竞技场分的索引与命中记录，后者用于同步报告里的覆盖统计 */
+  const arenaByKey = indexArenaScores(lmarena.scores);
+  const arenaMatchedLeagues = new Set<string>();
 
   const matchedEpochEntities = new Set<string>();
   const matchTiers: Record<string, number> = {};
@@ -821,6 +833,28 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
         sourceUrl: entry.sourceUrl,
       });
     }
+    /*
+     * LMArena 的竞技场分。它是站内图像与视频生成模型**唯一**的成绩来源，
+     * 其余类型的模型拿它当补充（人类偏好，与学术评测各说各话，所以各自成榜）。
+     *
+     * 匹配收得很紧：名字归一化之后还要求厂商对得上。竞技场里同名不同家的情况不少
+     * （`wan3.0` 挂在 alibaba、`wan2.7-t2v` 挂在 wan），只按名字匹配会张冠李戴。
+     */
+    for (const s of lookupArenaScores(
+      arenaByKey,
+      c.vendorId,
+      arenaMatchCandidates([c.modelSlug, ...(md?.name ? [md.name] : [])]),
+    )) {
+      pushScore({
+        league: s.league,
+        score: s.score,
+        unit: s.unit,
+        attribution: 'third-party',
+        source: 'lmarena',
+        sourceUrl: s.sourceUrl,
+      });
+      arenaMatchedLeagues.add(`${c.id}|${s.league}`);
+    }
     scores.sort((a, b) => (a.league < b.league ? -1 : a.league > b.league ? 1 : 0));
     if (scores.length > 0) provenance.scores = 'derived';
 
@@ -908,8 +942,9 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
   models.sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
 
   // ── 2b. 榜单元信息 ─────────────────────────────────────────────────
-  // 只列至少有一个模型命中的 league。分三类来源：Epoch zip 里的（元信息直接透传）、
-  // models.dev 自报的、LiveBench 的——后两类上游没有 metadata，能填的字段如实填，填不了的 null。
+  // 只列至少有一个模型命中的 league。分四类来源：Epoch zip 里的（元信息直接透传）、
+  // models.dev 自报的、LiveBench 的、LMArena 竞技场的——后三类上游没有 metadata，
+  // 能填的字段如实填，填不了的一律 null，不拿常识去猜。
   const leagueLanding: Record<string, number> = {};
   const leagueUnit = new Map<string, BenchmarkScore['unit']>();
   for (const m of models) {
@@ -938,10 +973,15 @@ export async function buildSnapshot(input: BuildInput): Promise<BuildOutput> {
       }
       const unit = leagueUnit.get(league) ?? 'pct';
       const isLiveBench = league.startsWith('livebench_');
+      const isArena = league.startsWith('arena_');
       return {
         id: league,
-        sourceFile: isLiveBench ? 'livebench.ai/table_<release>.csv' : 'models.dev/models.json#benchmarks[]',
-        scoreColumn: isLiveBench ? 'categories 分组均值' : 'score',
+        sourceFile: isArena
+          ? 'huggingface.co/datasets/lmarena-ai/leaderboard-dataset'
+          : isLiveBench
+            ? 'livebench.ai/table_<release>.csv'
+            : 'models.dev/models.json#benchmarks[]',
+        scoreColumn: isArena ? 'rating' : isLiveBench ? 'categories 分组均值' : 'score',
         unit,
         // 上游没有元信息就是 null，不拿「百分数满分是 100」这类常识去填——前端按 unit 自己知道。
         randomBaseline: null,

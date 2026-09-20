@@ -194,6 +194,7 @@ export const SAMPLE_SNAPSHOT: WorldSnapshot = {
     'vercel-gateway': { ok: false, fetchedAt: null, note: '样本数据' },
     litellm: { ok: false, fetchedAt: null, note: '样本数据' },
     livebench: { ok: false, fetchedAt: null, note: '样本数据' },
+    lmarena: { ok: false, fetchedAt: null, note: '样本数据' },
     derived: { ok: true, fetchedAt: null, note: '样本数据' },
     override: { ok: true, fetchedAt: null, note: '样本数据' },
   },

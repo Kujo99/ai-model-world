@@ -21,6 +21,11 @@ export type SourceId =
   | 'litellm'
   /** LiveBench 官方 CSV（Apache-2.0，DATASHEET 明文放弃数据版权） */
   | 'livebench'
+  /**
+   * LMArena 官方发布的榜单数据集（CC-BY 4.0）。注意这是读权利人自己的发布，
+   * 不是抓 arena.ai 的站——后者仍然禁止，区别见 scripts/sync/sources/lmarena.ts。
+   */
+  | 'lmarena'
   | 'derived'
   | 'override';
 
