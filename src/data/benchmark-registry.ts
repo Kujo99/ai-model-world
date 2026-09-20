@@ -467,13 +467,6 @@ const GENERAL: Record<string, Entry> = {
     priority: 5,
     homepage: 'https://arena.ai/leaderboard/video-edit',
   },
-  arena_text: {
-    label: '文本竞技场',
-    blurb: '真人盲投出来的对话偏好分。它衡量的是「人更爱看谁的回答」，跟学术评测测的「答得对不对」不是一回事，所以单独成榜。',
-    category: '综合',
-    priority: 30,
-    homepage: 'https://arena.ai/leaderboard/text',
-  },
   arena_search: {
     label: '联网搜索竞技场',
     blurb: '带联网能力的模型回答时效性问题，真人盲选谁查得准、答得实在。',

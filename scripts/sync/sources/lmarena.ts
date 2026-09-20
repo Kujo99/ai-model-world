@@ -99,6 +99,16 @@ export interface ArenaResult {
  * **`webdev` 故意不在这里。** 站内已经有 `webdev_arena_elo`，走的是 Epoch 的转载，
  * 两边同时接会让同一个赛制出现两份来源不同的分数。等哪天决定切换再一起动，
  * 现在重复接入只会制造一个需要仲裁的新问题。
+ *
+ * **`text` 也不在这里，原因是体量。** 它的 `latest` 有 10606 行，而其余分榜都在
+ * 10 到 650 行之间。一页 100 行就是 107 次请求，实测直接把 datasets-server 的匿名限流
+ * 打满，而且会连累排在它后面的分榜一起 429（首轮 text / search / document 三个一起掉）。
+ * 行数这么大是因为同一个模型在 overall、coding、math、多轮、指令遵循等十几个子分类里
+ * 各占一行，而我们只要 overall 那一条。
+ *
+ * 不接的代价很小：文本模型站内本来就有 ECI 与几十个学术榜单，竞技场只是锦上添花；
+ * 图像视频模型则是没有它就一个分数都没有。真要接，正确做法是改读 parquet
+ * （一个分榜一次请求）而不是翻页，或者用 `/filter` 端点在服务端按 category 过滤。
  */
 const ARENAS: Array<{ config: string; league: string }> = [
   { config: 'text_to_image', league: 'arena_text_to_image' },
@@ -106,7 +116,6 @@ const ARENAS: Array<{ config: string; league: string }> = [
   { config: 'image_edit', league: 'arena_image_edit' },
   { config: 'image_to_video', league: 'arena_image_to_video' },
   { config: 'video_edit', league: 'arena_video_edit' },
-  { config: 'text', league: 'arena_text' },
   { config: 'search', league: 'arena_search' },
   { config: 'document', league: 'arena_document' },
 ];
