@@ -267,11 +267,32 @@ Epoch 的 zip 里 `scicode_external.csv` 有 129 行指向 `artificialanalysis.a
 全是自建 GPU 或 Apple Silicon 上跑开源权重的测试，回答不了「Claude 的 API 多快」。
 所以**速度这个维度本站没有，短期也补不上**，只能在详情页外链过去。
 
-#### 绝不抓取 LMArena
+#### 绝不抓取 LMArena，但读它官方发布的数据集是另一回事
 
-其 ToS 明文禁止用自动化手段抓取模型名称与分数。
+**抓站这条永远有效。** 其 ToS 明文禁止用自动化手段抓取模型名称与分数，
+`arena.ai/robots.txt` 至今仍是 `Disallow: /api/`（2026-09-20 复查）。管线不碰它的站。
 
-**但 `benchmarks.webdev_arena_elo` 的上游确实是 LMArena**，这是一个刻意的决定而不是漏洞：
+**2026-09-20 起接入了它的官方数据集。** LMArena 在 Hugging Face 上以 **CC-BY 4.0** 发布
+`lmarena-ai/leaderboard-dataset`，权利人本人的发布，明确允许再分发与商用。
+读它与抓站在法律性质上是两回事：前者有明示授权，后者没有。
+接入的是 `scripts/sync/sources/lmarena.ts`，落地文生图、文生视频、图像编辑、
+图生视频、视频编辑、搜索、文档七个分榜。
+
+**为什么非它不可**：图像生成 21 个、视频生成 5 个模型此前一条成绩都没有，
+因为它们清一色是闭源商业模型。排查过的替代源全部不成立——Epoch zip 的 87 个文件里
+没有生成类榜单（`video_mme` 是视频**理解**）；HELM 的 HEIM 许可干净但停在 2023 年那一代，
+26 个模型与站内零交集；VBench 方向对但成绩数据集是私有的。**公开评测当代商业图像视频模型的
+只有 AA 与 LMArena 两家，而后者把数据开放了。** 接入后图像生成 12/21 有分、视频生成 4/5。
+
+三条约束写死在代码里，改的时候别绕开：分数是人类盲投的 Bradley-Terry 分，
+按「跨赛制永不混算」单独成榜、绝不进综合智力；成绩的 `sourceUrl` 指向**数据集**而不是
+arena.ai，这样 `findBlockedBenchmarkSources` 那道闸门可以继续严格拦站点域名；
+`text` 分榜故意不接，它的 `latest` 有 10606 行、107 页请求会把限流打满并连累后面的分榜。
+
+**这不构成对 AA 的任何松动。** AA 从未给出授权，条款明文禁止再分发并禁止
+「为构建类似或竞争的服务而访问」，方向是相反的。AA 永不豁免。
+
+**`benchmarks.webdev_arena_elo` 的上游同样是 LMArena**，这是更早的一个刻意决定：
 Epoch zip 里的 `webdev_arena_external.csv` 有 121 行 `Source link` 指向
 `https://web.lmarena.ai/leaderboard`。我们的合规依据是**消费 Epoch 在 CC-BY 4.0 下的再分发，
 而非直接抓取**。`compliance.ts` 里有注释记录这一点，豁免作用域被限死为
