@@ -49,6 +49,17 @@ import type { ScoreUnit } from '../../../src/lib/types';
 /** 上游一页最多给 100 行，超过要翻页 */
 const PAGE = 100;
 
+/**
+ * 成绩的署名地址指向**数据集**，不是 arena.ai 的榜单页。
+ *
+ * 两个理由，任一条都足够。其一，CC-BY 要求给出「材料」的链接，而我们消费的是这份
+ * 数据集，不是那个网页；这与 WebDev Arena 那一条把 sourceUrl 写成 epoch.ai 是同一个
+ * 道理——署名给我们真正读的那一份。其二，写站点地址会被 `findBlockedBenchmarkSources`
+ * 拦下，而那道闸门**不该为此放宽**：它防的是「分数是抓 arena.ai 得来的」，
+ * 这个判据继续严格成立才是对的。人类可读的榜单页放在 benchmark-registry 的 homepage 里。
+ */
+const DATASET_URL = 'https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset';
+
 export interface ArenaScore {
   league: string;
   /** 归一化后的候选键，形如 `nanobananapro`。合并阶段按它匹配站内模型 */
@@ -78,15 +89,15 @@ export interface ArenaResult {
  * 两边同时接会让同一个赛制出现两份来源不同的分数。等哪天决定切换再一起动，
  * 现在重复接入只会制造一个需要仲裁的新问题。
  */
-const ARENAS: Array<{ config: string; league: string; page: string }> = [
-  { config: 'text_to_image', league: 'arena_text_to_image', page: 'text-to-image' },
-  { config: 'text_to_video', league: 'arena_text_to_video', page: 'text-to-video' },
-  { config: 'image_edit', league: 'arena_image_edit', page: 'image-edit' },
-  { config: 'image_to_video', league: 'arena_image_to_video', page: 'image-to-video' },
-  { config: 'video_edit', league: 'arena_video_edit', page: 'video-edit' },
-  { config: 'text', league: 'arena_text', page: 'text' },
-  { config: 'search', league: 'arena_search', page: 'search' },
-  { config: 'document', league: 'arena_document', page: 'document' },
+const ARENAS: Array<{ config: string; league: string }> = [
+  { config: 'text_to_image', league: 'arena_text_to_image' },
+  { config: 'text_to_video', league: 'arena_text_to_video' },
+  { config: 'image_edit', league: 'arena_image_edit' },
+  { config: 'image_to_video', league: 'arena_image_to_video' },
+  { config: 'video_edit', league: 'arena_video_edit' },
+  { config: 'text', league: 'arena_text' },
+  { config: 'search', league: 'arena_search' },
+  { config: 'document', league: 'arena_document' },
 ];
 
 interface RawRow {
@@ -238,11 +249,7 @@ export function lookupArenaScores(
   return [...picked.values()];
 }
 
-async function fetchArena(
-  config: string,
-  league: string,
-  page: string,
-): Promise<ArenaScore[]> {
+async function fetchArena(config: string, league: string): Promise<ArenaScore[]> {
   const out: ArenaScore[] = [];
   let offset = 0;
   let total = Infinity;
@@ -274,7 +281,7 @@ async function fetchArena(
         voteCount: typeof row.vote_count === 'number' ? row.vote_count : 0,
         rank: typeof row.rank === 'number' ? row.rank : 0,
         publishDate: row.leaderboard_publish_date ?? '',
-        sourceUrl: `https://arena.ai/leaderboard/${page}`,
+        sourceUrl: DATASET_URL,
       });
     }
     offset += rows.length;
@@ -288,9 +295,9 @@ export async function fetchLmArena(): Promise<ArenaResult> {
   const counts: Record<string, number> = {};
   const failed: string[] = [];
 
-  for (const { config, league, page } of ARENAS) {
+  for (const { config, league } of ARENAS) {
     try {
-      const rows = await fetchArena(config, league, page);
+      const rows = await fetchArena(config, league);
       scores.push(...rows);
       counts[league] = rows.length;
     } catch (err) {
