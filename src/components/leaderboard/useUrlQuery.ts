@@ -33,7 +33,8 @@ export function useUrlQuery(): [
         if (v == null || v === '') next.delete(k);
         else next.set(k, v);
       }
-      const qs = next.toString();
+      // 逗号在 query 里合法，不转义的链接（`?m=a,b`）分享出去才看得懂
+      const qs = next.toString().replace(/%2C/gi, ',');
       const url = window.location.pathname + (qs ? `?${qs}` : '') + window.location.hash;
       window.history.replaceState(window.history.state, '', url);
       return next;

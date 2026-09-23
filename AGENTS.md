@@ -19,7 +19,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - 用户说「更新数据」→ `npm run sync && npm run sprites`，然后按 HANDOFF 第三节的三项检查清单核对再汇报。
 - 改了选拔 / 排名逻辑 → 先跑 `npx tsx scripts/qa/flagship-rules.ts` 看影响面。
-- 改了管线 → `npx tsx scripts/sync/selftest.ts`（217 项）+ `npx tsc --noEmit` + `npx eslint src scripts`。
+- 改了管线 → `npx tsx scripts/sync/selftest.ts`（224 项）+ `npx tsc --noEmit` + `npx eslint src scripts`。
 - 改了 UI → 用 Playwright 在 1440 / 390 两个断点截图自查，用户很在意字号与背景是否干扰阅读。
 - 生产构建用 `NEXT_DIST_DIR=.next-build npm run build`，别把 dev 的 `.next` 写坏。
 

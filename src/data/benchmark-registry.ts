@@ -145,6 +145,13 @@ const GENERAL: Record<string, Entry> = {
     priority: 10,
     homepage: 'https://lastexam.ai/',
   },
+  hle_tools: {
+    label: 'HLE 终极考试（可用工具）',
+    blurb: "Humanity's Last Exam 允许联网搜索、跑代码的测法，分数会比闭卷高一截，不能和闭卷那一栏放在一起比。",
+    category: '知识与推理',
+    priority: 11,
+    homepage: 'https://lastexam.ai/',
+  },
   gpqa_diamond: {
     label: 'GPQA 科学',
     blurb: '博士级别的物理、化学、生物选择题，题目设计到「谷歌也搜不到答案」。随机乱猜是 25 分。',
@@ -322,6 +329,41 @@ const GENERAL: Record<string, Entry> = {
     priority: 21,
     homepage: 'https://os-world.github.io/',
   },
+  osworld_2_partial: {
+    label: 'OSWorld 2.0 部分得分',
+    blurb: 'Anthropic 发布文里的 OSWorld 2.0 口径，完成一部分也给分。和 OpenAI 公布的离线集口径不是一回事，不能放在一起比。',
+    category: '智能体',
+    priority: 22,
+    homepage: 'https://osworld-v2.xlang.ai/',
+  },
+  osworld_2_offline: {
+    label: 'OSWorld 2.0 离线集',
+    blurb: 'OpenAI 发布文里的 OSWorld 2.0 口径：离线题集的部分得分。和 Anthropic 公布的口径不是一回事，不能放在一起比。',
+    category: '智能体',
+    priority: 23,
+    homepage: 'https://osworld-v2.xlang.ai/',
+  },
+  automationbench: {
+    label: 'AutomationBench',
+    blurb: 'Zapier 出的业务流程测试：用 47 个工具跑完销售、市场、客服、财务里的端到端流程。考的是能不能替你把一整套办公流程跑通。',
+    category: '智能体',
+    priority: 24,
+    homepage: 'https://zapier.com/benchmarks',
+  },
+  agents_last_exam: {
+    label: "Agents' Last Exam",
+    blurb: '横跨 55 个细分行业的长流程专业工作，看智能体能不能独立干完一件有经济价值的活。',
+    category: '智能体',
+    priority: 25,
+    homepage: 'https://agents-last-exam.org/',
+  },
+  terminal_bench_science: {
+    label: 'Terminal-Bench 科研版',
+    blurb: 'Terminal-Bench 的科研分支：在终端里独立完成科学研究类任务。',
+    category: '智能体',
+    priority: 26,
+    homepage: 'https://www.tbench.ai/',
+  },
   vending_bench_2: {
     label: '经营售货机',
     blurb: 'Vending-Bench：让模型经营一台虚拟售货机一整年——进货、定价、付租金。分数是最后账上的钱，考的是长期不犯糊涂。',
@@ -483,6 +525,13 @@ const GENERAL: Record<string, Entry> = {
   },
 
   // ── 多模态 ──
+  chartography: {
+    label: 'Chartography 读图表',
+    blurb: '看懂各种统计图表并回答问题，考的是从图里准确读出数字和趋势。',
+    category: '多模态',
+    priority: 5,
+    homepage: null,
+  },
   video_mme: {
     label: '视频理解',
     blurb: 'Video-MME：看一段视频回答问题，从几秒的短片到一小时的长片都有。',

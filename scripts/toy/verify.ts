@@ -84,6 +84,7 @@ const PAGES = [
   '/chronicle/index.html',
   '/vendor/deepseek/index.html',
   '/model/deepseek-deepseek-v4-1-flash/index.html',
+  '/compare/index.html',
   '/credits/index.html',
 ];
 
@@ -263,6 +264,40 @@ async function main() {
   }
   check(nHead > 0 && deadHead === 0, `${nHead} 个排序表头可用`, deadHead ? `${deadHead} 个无反应` : '');
   await all.close();
+
+  // ---------------------------------------------------------------- 模型对比
+  /*
+   * 对比页的数据是运行时 fetch 的，地址由服务端渲染进 HTML 再经 pack 剥前缀，
+   * 精灵图地址同理。这两条链路只有在真实挂载路径下才验得出来。
+   */
+  console.log('\n— 模型对比 —');
+  const cmp = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  let dataOk = false;
+  const badSprites: string[] = [];
+  cmp.on('response', (r) => {
+    if (r.url().includes('compare-data.json') && r.status() === 200) dataOk = true;
+    if (r.url().includes('/sprites/') && r.status() >= 400) badSprites.push(r.url());
+  });
+  await cmp.goto(`${BASE}/model/deepseek-deepseek-v4-1-flash/index.html`, { waitUntil: 'networkidle' });
+  await cmp.waitForTimeout(1200);
+  await cmp.locator('a', { hasText: /加入对比|和已选的/ }).first().click();
+  await cmp.waitForTimeout(2000);
+  check(cmp.url().includes('compare/index.html?m='), '详情页「加入对比」落到对比页', cmp.url().replace(BASE, ''));
+  check(dataOk, '对比数据可加载');
+  await cmp.getByLabel('添加要对比的模型').fill('deepseek v4 pro');
+  await cmp.waitForTimeout(400);
+  await cmp.keyboard.press('Enter');
+  await cmp.waitForTimeout(800);
+  const cards = await cmp.locator('a[href*="model/"]').filter({ hasText: /DeepSeek/ }).count();
+  check(cards >= 2 && cmp.url().includes(','), '对比页能添加第二个模型', `${cards} 张卡 · ${cmp.url().replace(BASE, '')}`);
+  const rows = await cmp.getByText('评测跑分').count();
+  check(rows > 0, '对比页渲染出跑分区');
+  check(badSprites.length === 0, '对比页精灵图可加载', badSprites.slice(0, 2).join(' | '));
+  await cmp.locator('a[href*="model/"]').filter({ hasText: /DeepSeek/ }).first().click();
+  await cmp.waitForTimeout(1800);
+  const back = await cmp.evaluate(() => document.body.innerText.length > 400 && !document.body.innerText.includes('not found'));
+  check(back, '对比页点名字回到详情页', back ? '' : `落在 ${cmp.url()}`);
+  await cmp.close();
 
   // ---------------------------------------------------------------- 全局搜索
   console.log('\n— 全局搜索 —');

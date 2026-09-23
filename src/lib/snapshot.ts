@@ -1,7 +1,9 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import type { WorldSnapshot } from './types';
+import type { BenchmarkScore, ModelRecord, WorldSnapshot } from './types';
 import { SAMPLE_SNAPSHOT } from './sample-snapshot';
+import { isCodingBenchmark } from '@/data/benchmark-registry';
+import { OFFICIAL_SCORES } from '@/data/official-scores';
 import { continentForCountry } from '@/data/vendor-registry';
 
 /**
@@ -36,7 +38,43 @@ function normalize(snapshot: WorldSnapshot): WorldSnapshot {
   return {
     ...snapshot,
     vendors: snapshot.vendors.map((v) => ({ ...v, continent: continentForCountry(v.country) })),
+    models: withOfficialScores(snapshot.models),
   };
+}
+
+/**
+ * 把 `official-scores.ts` 里人工录入的发布当天官方成绩并进去。
+ *
+ * 放在读快照这一步而不是管线里：管线的产出应当只含机器可复现的东西，
+ * 人工录入的一层单独放、单独看，哪天要撤只删那一张表。
+ * 编程类同时进 `coding[]`，详情页的编程战绩表只读那里。
+ */
+function withOfficialScores(models: ModelRecord[]): ModelRecord[] {
+  const byModel = new Map<string, BenchmarkScore[]>();
+  for (const o of OFFICIAL_SCORES) {
+    const list = byModel.get(o.model) ?? [];
+    list.push({
+      league: o.league,
+      score: o.score,
+      unit: o.unit,
+      attribution: o.attribution,
+      source: 'override',
+      sourceUrl: o.url,
+    });
+    byModel.set(o.model, list);
+  }
+  return models.map((m) => {
+    const extra = byModel.get(m.id);
+    if (!extra) return m;
+    const has = (list: BenchmarkScore[] | undefined, s: BenchmarkScore) =>
+      (list ?? []).some((x) => x.league === s.league && x.attribution === s.attribution);
+    const scores = [...(m.scores ?? []), ...extra.filter((s) => !has(m.scores, s))];
+    const coding = [
+      ...(m.coding ?? []),
+      ...extra.filter((s) => isCodingBenchmark(s.league) && !has(m.coding, s)),
+    ];
+    return { ...m, scores, coding };
+  });
 }
 
 export function loadSnapshot(): WorldSnapshot {

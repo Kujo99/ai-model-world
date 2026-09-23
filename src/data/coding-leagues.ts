@@ -138,6 +138,13 @@ export const CODING_LEAGUES: Record<string, CodingLeague> = {
     priority: 32,
     homepage: 'https://www.tbench.ai/',
   },
+  terminal_bench_4_0: {
+    label: 'Terminal-Bench 4.0',
+    blurb: 'Terminal-Bench 的第四代题库，在真实终端里完成多步骤的专业任务。与其他代次的分数不可直接比较。',
+    unit: 'pct',
+    priority: 29.5,
+    homepage: 'https://www.tbench.ai/',
+  },
   cursorbench: {
     label: 'CursorBench',
     blurb: '在真实 IDE 里做代码编辑的测试，题目来自 Cursor 收集的实际使用场景。',

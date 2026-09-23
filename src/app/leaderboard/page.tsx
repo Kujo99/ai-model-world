@@ -51,8 +51,8 @@ export default function LeaderboardPage() {
           <LeaderboardExplorer data={data} />
 
           <p className="mt-10 text-[13px] leading-relaxed text-[var(--color-ghost)]">
-            分数来自 Epoch AI（CC-BY 4.0，日更）。本站不使用 Artificial Analysis 与 LMArena
-            的数据，前者禁止再分发，后者禁止自动化抓取。
+            分数来自 Epoch AI（CC-BY 4.0）、LiveBench（Apache-2.0）与 LMArena 官方数据集（CC-BY 4.0），
+            每 12 小时同步一次。本站不使用 Artificial Analysis 的数据，它禁止再分发。
           </p>
         </div>
       </div>

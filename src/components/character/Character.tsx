@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { CharacterVisual, Tier } from '@/lib/derive';
+import { TIER_SCALE, type CharacterVisual } from '@/lib/derive';
 import { profileFor } from '@/data/vendor-registry';
 import { readableOnDark } from '@/lib/color';
 import { getDict, type Lang } from '@/lib/i18n';
@@ -28,19 +28,6 @@ const BOX = 'var(--sprite-box)';
 /** 精灵表布局，与 public/sprites/manifest.json 的 frame 字段对应 */
 const SHEET_COLUMNS = 9;
 const ROW_STAND = 0;
-
-/**
- * 体型档位的显示缩放。
- *
- * 为什么不靠精灵图自己表达体型：LPC 的身体类型（child/teen/female/male）**不是按身高排序的**。
- * 实测五个档位的站立帧平均高度是 48.0 / 52.8 / 51.3 / 54.3 / 61.3 像素——
- * 档位 2 到 3 竟然是 -1.5px，更大的模型反而更矮，而且全档跨度只有 13px（画布的 21%）。
- * 体型是广场远景仅有的四个信号之一，非单调等于这个维度失效。
- *
- * 所以身体类型只保留为个体差异的花样，档位改由显示缩放接管，高度严格单调、跨度约 49px。
- * 缩放走 image-rendering: pixelated，是最近邻而非插值，边缘不会糊。
- */
-const TIER_SCALE: Record<Tier, number> = { 1: 0.62, 2: 0.72, 3: 0.82, 4: 0.91, 5: 1 };
 
 function Silhouette({ visual }: { visual: CharacterVisual }) {
   const color = readableOnDark(profileFor(visual.vendorId).accentColor);

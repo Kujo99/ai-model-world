@@ -19,6 +19,7 @@ export interface Dict {
     plaza: string;
     chronicle: string;
     leaderboard: string;
+    compare: string;
   };
 
   continent: {
@@ -189,12 +190,13 @@ const zh: Dict = {
   siteName: '大模型世界',
   siteTagline: '一眼看懂大模型的当下格局',
   siteDescription:
-    '把每个大模型画成一个像素角色，用能力条和排行榜把「谁最聪明、谁最会编程、谁最便宜」摆在明面上。数据来自第三方公开评测，每小时自动同步。',
+    '把每个大模型画成一个像素角色，用能力条和排行榜把「谁最聪明、谁最会编程、谁最便宜」摆在明面上。数据来自第三方公开评测，每 12 小时自动同步。',
 
   nav: {
     plaza: '广场',
     chronicle: '时间线',
     leaderboard: '排行榜',
+    compare: '对比',
   },
 
   continent: {

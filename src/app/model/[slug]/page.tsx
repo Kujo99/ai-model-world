@@ -60,7 +60,7 @@ export async function generateMetadata({ params }: PageProps<"/model/[slug]">) {
   const profile = profileFor(model.vendorId);
   return {
     title: model.name,
-    description: `${profile.nameZh}的${model.name}：上下文 ${model.contextWindow ?? "未知"} tokens，输出单价 ${model.pricing.outputPerMTok ?? "未知"} 美元每百万 tokens。数据每小时自动同步。`,
+    description: `${profile.nameZh}的${model.name}：上下文 ${model.contextWindow ?? "未知"} tokens，输出单价 ${model.pricing.outputPerMTok ?? "未知"} 美元每百万 tokens。数据每 12 小时自动同步。`,
   };
 }
 
@@ -246,7 +246,7 @@ export default async function ModelRoomPage({
               {persona}
             </p>
             {/* 看完定位，下一个动作往往是「别人怎么评价它」。所以贴着这句话放，不单开一节。 */}
-            <ReviewLinks modelName={model.name} lang={lang} />
+            <ReviewLinks modelName={model.name} slug={model.slug} lang={lang} />
             {isSingleSource(model) && (
               <p className="mt-3 text-[12px] text-[var(--color-ghost)]">
                 ⚠ {dict.unknown.singleSource}
